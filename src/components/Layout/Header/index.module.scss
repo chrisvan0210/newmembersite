@@ -1,0 +1,142 @@
+.container {
+    @extend %center-xy;
+
+    padding: 0 10px;
+    height: 128px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    color: var(--color-white);
+    background: var(--color-fun-green2);
+    background-image: var(--color-green-gradient);
+    z-index: 8;
+}
+
+%content {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.flexRow {
+    @extend %flex-row;
+    @include max1199 {
+        padding-right: 12px;
+    }
+    @include max767 {
+        padding-right: 0;
+    }
+}
+
+.list {
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.topNav {
+    @extend %content;
+
+    height: 36px;
+    order: 1;
+
+    &__button {
+        @include max575 {
+            width: auto !important;
+            padding: auto 4px !important;
+        }
+    }
+}
+
+.dateTime {
+    @extend %flex-row
+}
+
+.buttonLabel {
+    display: inline-block;
+}
+
+.buttonIcon {
+    display: none;
+}
+
+.bottomNav {
+    @extend %content;
+
+    padding: 3px;
+    order: 2;
+}
+
+.bottomSubNav {
+    position: absolute;
+    top: 128px;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    min-height: 180px;
+    background: var(--color-camarone) url("https://cdn.hanwei1234.com/Content/images/bgfornav.jpg") repeat-x bottom center;
+
+    &--hovered {
+        visibility: visible; 
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0%);
+        transition-delay: 300ms, 300ms, 300ms;
+    }
+
+}
+
+.mobileMenu {
+    font-size: 38px;
+    display: none;
+}
+
+.loginPopup {
+    position: relative;
+}
+
+@include max575 {
+    .buttonIcon {
+        display: block;
+    }
+
+    .buttonLabel {
+        display: none;
+    }
+}
+
+@include max767 {
+    .topNav {
+        justify-content: center;
+    }
+
+    .dateTime {
+        display: none;
+    }
+}
+
+@include max991 {
+    .topNav {
+        order: 2;
+    }
+    
+    .bottomNav {
+        justify-content: center;
+        order: 1;
+    }
+
+    .mobileMenu {
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        cursor: pointer;
+    }
+}

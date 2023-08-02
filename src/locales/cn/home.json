@@ -1,0 +1,8 @@
+{
+	"welcome": "欢迎，这是服务器页面",
+	"counter": {
+		"increment": "增量",
+		"decrement": "递减"
+	},
+	"title": "主页"
+}

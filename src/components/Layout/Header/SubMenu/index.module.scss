@@ -1,0 +1,1153 @@
+@mixin casino-default-image-props {
+    background: url("https://cdn.hanwei1234.com/Content/images/NavIcons.png") no-repeat;
+    display: inline-block;
+    width: 200px;
+    height: 145px;
+}
+
+@mixin slots-default-image-props {
+    background: url("https://cdn.hanwei1234.com/Content/images/NavIcons.png") no-repeat;
+    display: inline-block;
+    width: 147px;
+    height: 114px;
+}
+
+@mixin games-default-image-props {
+    background: url("https://cdn.hanwei1234.com/Content/images/NavIcons.png") no-repeat;
+    display: inline-block;
+    width: 144px;
+    height: 114px;
+}
+
+@mixin sub-section-height-and-width {
+    height: 180px;
+    width: 100%;
+}
+
+@mixin content-width-and-margin {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin flex-row-with-no-align-items {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin menu-styles {
+    height: 149px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+@mixin play-button-styles {
+    height: 31px;
+    color: var(--color-white);
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subMenu {
+    $root: &;
+    @extend %center-xy;
+
+    width: 100%;
+    flex-direction: column;
+    
+    // Home
+    &__subSectionMainz {
+        @include sub-section-height-and-width;
+
+        background: var(--color-fun-green4) url("https://cdn.hanwei1234.com/Content/images/navigation/home/navsponsor-bg.jpg") repeat-x top center;
+    }
+
+    &__subSectionVip {
+        @include sub-section-height-and-width;
+        
+        background: var(--color-fun-green4) url("https://cdn.hanwei1234.com/Content/images/navigation/home/navvip-bg.jpg") repeat-x top center;
+    }   
+    
+    &__sectionContent {
+        @include content-width-and-margin;
+    }
+    
+    &__sectionContent2 {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+        
+    }
+
+    &__subHovMainz {
+        background: none;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no repeat top center;
+
+            #{$root}__mainzLogo {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayMainz {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovVip {
+        width: 400px;
+
+        &:hover {
+            #{$root}__vipLogo {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayVip {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovRewards {
+        width: 400px;
+
+        &:hover {
+            #{$root}__rewardLogo {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayRewards {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovInfo {
+        width: 400px;
+
+        &:hover {
+            #{$root}__infoLogo {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayInfoCenter {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+
+    &__homeMenuMainz, &__homeMenuInfoCenter, &__homeMenuRewards, &__homeMenuVip {
+        @include menu-styles
+        
+    }
+    
+    &__vipGirls, &__vipLogo, &__rewardItem, &__rewardLogo, &__infoMan, &__infoLogo {
+        vertical-align: middle;
+    }
+
+    &__vipGirls {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__vipLogo {
+        position: absolute;
+        top: 45px;
+        right: 5%;
+    }
+
+    &__rewardItem {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__rewardLogo {
+        position: absolute;
+        top: 55px;
+        right: 4%;
+    }
+
+    &__infoMan {
+        position: absolute;
+        top: 0;
+        left: 15px;
+    }
+
+    &__infoLogo {
+        position: absolute;
+        top: 35px;
+        right:5%;
+    }
+
+    &__vipLogo, &__rewardLogo, &__infoLogo {
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__sponsorPlayer {
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        left: 25px;
+    }
+
+    &__mainzLogo {
+        vertical-align: middle;
+        position: absolute;
+        top: 30px;
+        right: 15%;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__subPlayMainz, &__subPlayVip, &__subPlayRewards, &__subPlayInfoCenter { 
+        @include play-button-styles;
+    }
+
+    // Mobile
+    &__subSectionMobile {
+        @include sub-section-height-and-width;
+
+        background: url("https://cdn.hanwei1234.com/Content/images/navigation/mobilenav/mobile-app-bg-submenu.jpg") no-repeat;
+    }
+   
+    &__sectionContentMobile {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+    
+    &__subHovSportsApp {
+        width: 600px;
+        background: none;
+
+        &:hover {
+            #{$root}__subPlaySportsApp {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg");
+            }
+        }
+    }
+
+    &__subHovMainApp {
+        width: 600px;
+        background: none;
+
+        &:hover {
+            #{$root}__subPlayMainApp {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg");
+            }
+        }
+    }
+
+    &__mobileMenuSports, &__mobileMenuMain {
+        display: flex;
+        height: 149px;
+    }
+
+    &__fb88sports, &__fb88app {
+        padding-left: 50px;
+        margin-top: 20px;
+    }
+
+    &__sportsDescription, &__mainDescription {
+        padding-top: 40px;
+        padding-left: 15px;
+        color: var(--color-white);
+    }
+    
+    &__descriptionTitle {
+        font-size: 14px;
+        color: var(--color-texas);
+        margin: 0;
+        text-shadow: 0 0 10px var(--color-black);
+    }
+
+    &__subPlaySportsApp, &__subPlayMainApp { 
+        @include play-button-styles;
+    }
+   
+
+    // Sports
+    &__subSectionSportsTop, &__subSectionSportsBottom {
+        @include sub-section-height-and-width;
+
+        background: var(--color-fun-green4) url("https://cdn.hanwei1234.com/Content/images/navigation/sportsnav/sports-bg2.jpg?v=20221120") repeat-x top center;
+    }   
+        
+    &__sectionContentSportsTop, &__sectionContentSportsBottom {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovSports3Player {
+        width: 400px;
+
+        &:hover {
+            #{$root}__euroLogo, #{$root}__sports3Player {
+                transform: scale(1);
+            }
+
+            #{$root}__hotImage {
+                animation:  horizontal-shaking 0.35s 10ms 2;
+            }
+
+            #{$root}__subPlaySports3Player {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovEuroPlayer {
+        width: 400px;
+
+        &:hover {
+            #{$root}__euroLogo, #{$root}__euroPlayer {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayEuroPlayer {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovSportsXPlayer {
+        width: 400px;
+
+        &:hover {
+            #{$root}__euroLogo, #{$root}__sportsXPlayer {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlaySportsXPlayer {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovSports247Player {
+        width: 400px;
+
+        &:hover {
+            #{$root}__euroLogo, #{$root}__sports247Player {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlaySports247Player {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovSportsAppQR {
+        width: 400px;
+
+        &:hover {
+            #{$root}__sportsAppQR {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlaySportsAppQR {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__homeMenuVipSports3Player, &__homeMenuEuroPlayer, &__homeMenuSportsXPlayer, &__homeMenuSports247Player, &__homeMenuSportsAppQR {
+        @include menu-styles;
+    }
+
+    &__sports3Player {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        height: 167px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__euroLogo {
+        position: absolute;
+        height: 20px;
+        right: 32px;
+        top: 66px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__hotImage {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__euroPlayer, &__sportsXPlayer, &__sports247Player {
+        position: absolute;
+        left: -10px;
+        top: -9px;
+        height: 168px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__sportsAppQR {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        height: 157px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__subPlaySports3Player, &__subPlayEuroPlayer, &__subPlaySportsXPlayer, &__subPlaySports247Player, &__subPlaySportsAppQR {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Virtual Sports
+    &__subSectionFootBallAPlayer {
+        @include sub-section-height-and-width;
+
+        background: var(--color-fun-green4) url("https://cdn.hanwei1234.com/Content/images/navigation/sportsnav/sports-bg2.jpg?v=20221120") repeat-x top center;
+    }   
+        
+    &__sectionContentFootBallAPlayer {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovFootBallAPlayer {
+        width: 600px;
+
+        &:hover {
+            #{$root}__virtualSportsLogo, #{$root}__footBallAPlayer {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayFootBallAPlayer {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__virtualSportsMenuFootBallAPlayer {
+        @include menu-styles;
+    }   
+
+    &__footBallAPlayer {
+        position: absolute;
+        top: -11px;
+        left: 5px;
+        height: 178px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+    
+    &__virtualSportsLogo {
+        position: absolute;
+        top: 20px;
+        right: 38px;
+        width: 300px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__subPlayFootBallAPlayer {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Esports
+    &__subSectionEsports {
+        @include sub-section-height-and-width;
+
+        background: var(--color-fun-green4) url("https://cdn.hanwei1234.com/Content/images/navigation/sportsnav/new2-esports-bg.jpg?v=20221120") repeat-x top center;
+    }   
+        
+    &__sectionContentEsports {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovEsportsLogo {
+        width: 600px;
+
+        &:hover {
+            #{$root}__esportsLogo {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayEsportsLogo {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__subHovEsports7Logo {
+        width: 600px;
+
+        &:hover {
+            #{$root}__esports7Logo {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayEsports7Logo {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__esportsMenuEsportsLogo, &__esportsMenuEsports7Logo {
+        @include menu-styles;
+    }   
+
+    &__esportsLogo {
+        position: absolute;
+        top: 46px;
+        left: 31.8%;
+        height: 32px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__esports7Logo {
+        position: absolute;
+        top: 46px;
+        right: 7.8%;
+        height: 32px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__subPlayEsportsLogo, &__subPlayEsports7Logo {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Casino
+    &__subSectionCasinoTop {
+        @include sub-section-height-and-width;
+
+        background: var(--color-dark-fern3) url("https://cdn.hanwei1234.com/Content/images/bgfornav.jpg") repeat-x bottom center;
+        z-index: 100;
+    }   
+
+    &__contentWrapperCasinoTop {
+        @include sub-section-height-and-width;
+
+        background: url("https://cdn.hanwei1234.com/Content/images/casino_sub_top_bg.jpg") top center no-repeat;
+        z-index: 100;
+    }
+
+    &__contentWrapperCasinoBottom {
+        @include sub-section-height-and-width;
+
+        background: url("https://cdn.hanwei1234.com/Content/images/casino_sub_bot_bg.jpg") top center no-repeat;
+        background-size: 100% 150px;
+    }
+        
+    &__sectionContentCasinoTop {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovClubA {
+        width: 240px;
+        filter: brightness(80%) grayscale(1) contrast(90%);
+    }
+   
+    &__clubAce {
+        @include casino-default-image-props;
+
+        background-position: -367px -5px !important;
+    }
+
+    &__subName {
+        position: absolute;
+        z-index: 3;
+        top: 109px;
+        left: 70px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 900;
+        color: var(--color-white);
+        text-shadow: 0 0 10px var(--color-spring-green), 0 0 10px var(--color-spring-green);
+        letter-spacing: initial;
+        transition: top 0.3s ease;
+    }
+
+    &__subNameClubENew {
+        position: absolute;
+        top: 10px;
+        right: 21%;
+        z-index: 999;
+        color: var(--color-white);
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 30px;
+        height: 16px;
+        line-height: 16px;
+        background: var(--color-red);
+        border-radius: 0;
+        animation: blink-me ease-in-out 1s infinite;
+    }
+
+    &__subHovClubK {
+        width: 240px;
+        overflow: hidden;
+    
+        &:hover {
+            cursor: pointer;
+            
+            #{$root}__subName {
+                top: 107px;
+                text-shadow: 0 0 5px var(--color-broom), 0 0 5px var(--color-broom), 0 0 2px var(--color-broom);
+                color: var(--color-gorse);
+            }
+
+            #{$root}__clubKing {
+                transform: scale(1.04);
+                
+            }
+
+            #{$root}__subPlayClubK {
+                text-shadow: 1px 1px 3px var(--color-black);
+            }
+        }
+    }
+  
+    &__clubKing {
+        @include casino-default-image-props;
+        
+        background-position: -562px -5px !important;
+    }
+
+    &__subHovClubQ {
+        width: 240px;
+
+        &:hover {
+            cursor: pointer;
+            
+            #{$root}__subName {
+                top: 107px;
+                text-shadow: 0 0 5px var(--color-broom), 0 0 5px var(--color-broom), 0 0 2px var(--color-broom);
+                color: var(--color-gorse);
+            }
+
+            #{$root}__clubQueen {
+                transform: scale(1.04);
+                
+            }
+
+            #{$root}__subPlayClubQ {
+                text-shadow: 1px 1px 3px var(--color-black);
+            }
+        }
+    }
+  
+    &__clubQueen {
+        @include casino-default-image-props;
+        
+        background-position: -366px -168px !important;
+    }
+
+    &__subHovClubJ {
+        width: 240px;
+
+        &:hover {
+            cursor: pointer;
+            
+            #{$root}__subName {
+                top: 107px;
+                text-shadow: 0 0 5px var(--color-broom), 0 0 5px var(--color-broom), 0 0 2px var(--color-broom);
+                color: var(--color-gorse);
+            }
+
+            #{$root}__clubJack {
+                transform: scale(1.04);
+                
+            }
+
+            #{$root}__subPlayClubJ {
+                text-shadow: 1px 1px 3px var(--color-black);
+            }
+        }
+    }
+
+    &__clubJack {
+        @include casino-default-image-props;
+        
+        background-position: -561px -168px !important;
+    }
+
+    &__subHovClubT {
+        width: 240px;
+        filter: brightness(80%) grayscale(1) contrast(90%);
+    }
+
+    &__clubTen {
+        @include casino-default-image-props;
+        
+        background-position: -370px -335px !important;
+    }
+
+    &__subSectionCasinoBottom {
+        @include sub-section-height-and-width;
+
+        background: var(--color-dark-fern3) url("https://cdn.hanwei1234.com/Content/images/bgfornav.jpg") repeat-x bottom center;
+    }   
+        
+    &__sectionContentCasinoBottom {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovClubN {
+        width: 240px;
+
+        &:hover {
+            cursor: pointer;
+            
+            #{$root}__subName {
+                top: 107px;
+                text-shadow: 0 0 5px var(--color-broom), 0 0 5px var(--color-broom), 0 0 2px var(--color-broom);
+                color: var(--color-gorse);
+            }
+
+            #{$root}__clubNine {
+                transform: scale(1.04);
+                
+            }
+
+            #{$root}__subPlayClubN {
+                text-shadow: 1px 1px 3px var(--color-black);
+            }
+        }
+    }
+   
+    &__clubNine {
+        @include casino-default-image-props;
+
+        background-position: -564px -335px !important;
+    }
+
+    &__subHovClubE {
+        width: 240px;
+
+        &:hover {
+            cursor: pointer;
+            
+            #{$root}__subName {
+                top: 107px;
+                text-shadow: 0 0 5px var(--color-broom), 0 0 5px var(--color-broom), 0 0 2px var(--color-broom);
+                color: var(--color-gorse);
+            }
+
+            #{$root}__clubEight {
+                transform: scale(1.04);
+                
+            }
+
+            #{$root}__subPlayClubE {
+                text-shadow: 1px 1px 3px var(--color-black);
+            }
+        }
+    }
+   
+    &__clubEight {
+        @include casino-default-image-props;
+
+        background-position: -730px -473px !important;
+    }
+    
+    &__casinoMenuClubA, &__casinoMenuClubK, &__casinoMenuClubQ, &__casinoMenuClubJ, &__casinoMenuClubT, &__casinoMenuClubN, &__casinoMenuClubE  {
+        @include menu-styles;
+    }   
+
+    &__subPlayClubA, &__subPlayClubK, &__subPlayClubQ, &__subPlayClubJ, &__subPlayClubT, &__subPlayClubN, &__subPlayClubE {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Slots
+    &__subSectionSlots {
+        @include sub-section-height-and-width;
+
+        background: var(--color-dark-fern3) url("https://cdn.hanwei1234.com/Content/images/bgfornav.jpg") repeat-x bottom center;
+    }   
+        
+    &__sectionContentSlots {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovKoiSlots {
+        width: 300px;
+    
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+   
+    &__koiSlots {
+        @include slots-default-image-props;
+
+        background-position: -1134px -297px !important;
+    }
+
+    &__subNameSlots {
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        font-size: 9px;
+        color: var(--color-broom);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__subHovSimSlots {
+        width: 300px;
+        overflow: hidden;
+    
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+
+    &__simSlots {
+        @include slots-default-image-props;
+
+        background-position: -1155px -150px !important;
+        position: relative;
+        left: 13px;
+    }
+
+    &__subHovPGSlots {
+        width: 300px;
+
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+    
+    &__pgSlots {
+        @include casino-default-image-props;
+        
+        background-position: -1159px -913px !important;
+        position: relative;
+        left: 35px;
+    }
+
+    &__subNamePGNew {
+        position: absolute;
+        top: 10px;
+        right: 21%;
+        z-index: 999;
+        color: var(--color-white);
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 30px;
+        height: 16px;
+        line-height: 16px;
+        background: var(--color-red);
+        border-radius: 0;
+        animation: blink-me ease-in-out 1s infinite;
+    }
+
+    &__subHovQueenSlots {
+        width: 300px;
+
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+
+    &__queenSlots {
+        @include casino-default-image-props;
+        
+        background-position: -1150px -438px !important;
+        width: 140px;
+        
+    }
+ 
+    &__slotsMenuKoiSlots, &__slotsMenuPGSlots,&__slotsMenuSimSlots,&__slotsMenuQueenSlots  {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 129px;
+        padding: 10px;
+    }   
+
+    &__subPlayKoiSlots, &__subPlayPGSlots, &__subPlaySimSlots,&__subPlayQueenSlots {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Games
+    &__subSectionGames {
+        @include sub-section-height-and-width;
+
+        background: var(--color-dark-fern3) url("https://cdn.hanwei1234.com/Content/images/bgfornav.jpg") repeat-x bottom center;
+    }   
+        
+    &__sectionContentGames {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subNameLustrous, &__subNameFisherman {
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        font-size: 9px;
+        color: var(--color-broom);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__subHovFishermanGold {
+        width: 300px;
+
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+
+    &__fishermanGold {
+        @include games-default-image-props;
+        
+        background-position: -760px -142px !important;
+        position: relative;
+        left: 35px;
+    }
+
+    &__subNameLustrousNew {
+        position: absolute;
+        top: 10px;
+        right: 21%;
+        z-index: 999;
+        color: var(--color-white);
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 30px;
+        height: 16px;
+        line-height: 16px;
+        background: var(--color-red);
+        border-radius: 0;
+        animation: blink-me ease-in-out 1s infinite;
+    }
+
+    &__subHovLustrousOcean {
+        width: 300px;
+
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+    
+    &__lustrousOcean {
+        @include games-default-image-props;
+        
+        background-position: -760px -142px !important;
+        width: 140px;
+        
+    }
+ 
+    &__gamesMenuFishermanGold, &__gamesMenuLustrousOcean {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 129px;
+        padding: 10px;
+    }   
+
+    &__subPlayLustrousOcean, &__subPlayFishermanGold {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Lottery
+    &__subSectionLottery {
+        @include sub-section-height-and-width;
+
+        background: var(--color-fun-green4) url("https://cdn.hanwei1234.com/Content/images/navigation/lottery/lottery-nav-bg3.jpg") repeat-x top center;
+    }   
+        
+    &__sectionContentLottery {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__subHovLottery {
+        width: 600px;
+
+        &:hover {
+            #{$root}__numberGameText {
+                transform: scale(1);
+            }
+
+            #{$root}__subPlayLottery {
+                background: url("https://cdn.hanwei1234.com/Content/images/sports_sub_hover.jpg") top left repeat-x;
+            }
+        }
+    }
+
+    &__lotteryMenu {
+        @include menu-styles;
+    }   
+
+    &__lotteryIcon {
+        position: absolute;
+        left: 6%;
+        bottom: 0;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__numberGameText {
+        position: absolute;
+        top: 46px;
+        right: 7.8%;
+        height: 32px;
+        transform: scale(0.9);
+        transition: all 200ms linear;
+    }
+
+    &__subPlayLottery {
+        @include play-button-styles;
+
+        background: none;
+    }
+
+    // Promotions
+    &__subSectionPromotions {
+        @include sub-section-height-and-width;
+
+        background: var(--color-dark-fern3) url("https://cdn.hanwei1234.com/Content/images/bgfornav.jpg") repeat-x bottom center;
+    }   
+        
+    &__sectionContentPromotions {
+        @include content-width-and-margin;
+        @include flex-row-with-no-align-items;
+    }
+
+    &__promoSubNavHolder {
+        width: 20%;
+        margin-top: 10px;
+    }
+
+    &__tabContent {
+        width: 900px;
+    }
+
+    &__promoTabSubList {
+        margin-right: 0;
+        border: none;
+        border-radius: 0;
+        text-align: left;
+        padding: 0 0 0 5px;
+        color: var(--color-white);
+        height: 30px;
+        line-height: 30px;
+
+        &:hover {
+            color: var(--color-broom);
+            background-color: var(--color-salem3);
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__promoTab--active {
+        color: var(--color-broom);
+        background-color: var(--color-salem3);
+        border: none;
+        cursor: pointer;
+    }
+
+    &__promoTabSub {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    &__newMemberPromo, &__reloadPromo, &__specialPromo, &__rebatePromo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &__subHovWelcomeBonus, &__subHovReloadPromo, &__subHovSpecialPromo, &__subHovRebatePromo {
+        padding: 10px 20px 20px; 
+        height: 150px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            background: url("https://cdn.hanwei1234.com/Content/images/Nav_Hover.jpg") no-repeat top center;
+        }
+    }
+
+    &__subPlayWelcomeBonus, &__subPlayReloadPromo, &__subPlaySpecialPromo, &__subPlayRebatePromo {
+        @include play-button-styles;
+
+        background: none;
+        padding-top: 20px;
+    }
+
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+@keyframes blink-me {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.1; }
+}

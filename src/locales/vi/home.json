@@ -1,0 +1,8 @@
+{
+	"welcome": "Xin chào, đây là trang khách hàng",
+	"counter": {
+		"increment": "Tăng",
+		"decrement": "Giảm"
+	},
+	"title": "Trang Chủ"
+}

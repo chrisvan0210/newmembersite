@@ -1,0 +1,17 @@
+{
+	"header": {
+		"home": "หน้าหลัก",
+		"mobile": "แอปพลิเคชัน ",
+		"sportsbook": "กีฬา",
+		"virtual_sports": "กีฬาเสมือนจริง",
+		"esports": "อีสปอร์ต",
+		"casino_club": "คาสิโนสด",
+		"slots": "สล็อต",
+		"games": "เกมส์",
+		"lottery": "ลอตเตอรี่",
+		"promotions": "โปรโมชั่น"
+	},
+	"footer": {
+		"all_rights_reserved": "สงวนลิขสิทธิ์"
+	}
+}

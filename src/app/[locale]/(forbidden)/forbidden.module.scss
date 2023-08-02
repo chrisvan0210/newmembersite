@@ -1,0 +1,7 @@
+.mainBody {
+  @extend %main-body;
+
+  background: var(--color-bottle-green) url('https://cdn.hanwei1234.com/Content/images/forbidden/forbidden-bg.jpg') no-repeat center 25%;
+  background-size: cover;
+  background-attachment: fixed;
+}

@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    &__security {
+      @include max991 {
+        margin-top: 12px;
+      }
+    }
+    
+    &__links {
+        padding: 0 6px;
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        @include max991 {
+          justify-content: center;
+        }
+    }
+
+    &__icons {
+      margin: 6px !important;
+    }
+}

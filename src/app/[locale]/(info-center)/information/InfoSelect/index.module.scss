@@ -1,0 +1,46 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 25px 0 20px;
+  border-bottom: thin solid var(--color-wild-sand2);
+  @include max575 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__select {
+    @extend %center-y;
+
+    flex-direction: column;
+    text-align: center;
+    color: var(--color-gray);
+
+    &:hover {
+      color: var(--color-fun-green);
+    }
+  }
+
+  &__selectIcon {
+    @include max575 {
+      display: none;
+    }
+  }
+
+  &__selectLabel {
+    margin: 12px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    font-size: 17px;
+    width: 72%;
+    @include max575 {
+      width: 90%;
+      margin: 6px auto;
+    }
+
+    &--selected {
+      color: var(--color-fun-green);
+      font-weight: 600;
+    }
+
+  }
+}

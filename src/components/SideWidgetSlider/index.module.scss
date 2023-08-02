@@ -1,0 +1,171 @@
+@include animation-slide( slide-from-right, 'right', -500, 0);
+@include animation-slide( slide-to-right, 'right', 0, -600);
+
+.widgetContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+
+    &--show {
+        display: block;
+    }
+}
+
+.arrowContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9;
+    width: 480px;
+    height: 300px;
+    padding: 0 10px;
+    opacity: 0;
+    transition: opacity ease-in-out 1s;
+
+    &__arrow {
+        color: var(--color-white);
+    }
+}
+
+.sideWidget {
+    position: fixed;
+    right: -550px;
+    top: 0;
+    height: 100%;
+    width: 500px;
+    background: var(--color-shadow-90);
+    color: var(--color-white);
+    padding: 20px;
+    transition: right ease-in-out .5s;
+    z-index: 9;
+    @include max767 {
+        display: none;
+    }
+
+    &--show {
+        animation: 0.35s ease-in-out 1 slide-from-right forwards,0.35s ease-in-out 1 opacity forwards;
+    }
+
+    &--offRight {
+        animation: 0.35s ease-in-out 1 slide-to-right forwards;
+    }
+
+    &__close {
+        position: relative;
+        left: 92%;
+        top: -18px;
+        height: 18px;
+    }
+
+    &__linkClose {
+        color: var(--color-white);
+        font-weight: bold;
+        font-size: 26px;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    &__content {
+        height: calc(100% - 40px);
+    }
+
+    &__sliderWrapper { 
+        width: 500px;
+        height: 400px;
+        cursor: url("https://cdn.hanwei1234.com/Content/css/sliderpro/images/openhand.cur"), move;
+      
+        @include max575 {
+            padding: 0 20px;
+        }
+
+        &:hover {
+            .arrowContainer {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__text{
+        margin-top: 20px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-size: 23px;
+        text-decoration: underline;
+        letter-spacing: 2px;
+
+        @include max575 {
+            margin-left: 40px;
+        }
+    }
+
+    &__context {
+        line-height: 30px;
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 20px;
+
+        @include max575 {
+            padding: 0 40px;
+        }
+    }
+
+    &__buttonContainer {
+        margin: 48px auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__button {
+        font-size: 18px;
+        padding: 10px;
+        width: 98% !important;
+        height: 48px !important;
+        margin: 8px auto !important;
+    }
+}
+
+.slick {
+    display: flex !important;
+    justify-content: center;
+    margin-left: -34px;
+  
+    li {
+        margin: 0 2px;
+  
+        &::marker {
+            content: '';
+        }
+    }
+  
+    &__image {
+        width: 80px;
+        height: 60px;
+        border: none;
+        opacity: 0.85;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+  
+    :global(li.slick-active) {
+        .slick__image {
+            border: 2px solid var(--color-white);
+        }
+    }
+}
+
+.rulesLink {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-broom);
+    text-decoration: underline;
+}

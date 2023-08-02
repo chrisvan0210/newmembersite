@@ -1,0 +1,60 @@
+.container {
+	padding: 0 5px;
+	margin-inline: 4px;
+
+	ul {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	}  
+}
+
+.main {
+	@extend %center-xy;
+
+	position: relative;
+	cursor: pointer;
+
+	.list {
+		display: none;
+
+		li {
+		  cursor: pointer;
+	
+		  &.active,
+		  &:hover {
+			button {
+			  color: var(--color-broom);
+			}
+		  }	
+		}
+	}
+
+	&:hover {
+	  .list {
+		display: block;
+		border-radius: 3px;
+		position: absolute;
+		top: 20px;
+		right:0;
+		z-index: 900;
+	  }
+	}
+}
+
+
+.button {
+	border: none;
+	outline: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 8px;
+	width: 100px;
+	padding: 4px;
+	background: var(--color-fun-green2);
+	color: var(--color-white);
+	text-align: right;
+	font-size: 12px;
+	cursor: pointer;
+}

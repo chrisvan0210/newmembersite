@@ -1,0 +1,183 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-shadow-80);
+    z-index: 9;
+    overflow-y: scroll;
+}
+
+.modalWrapper {
+    animation: 0.5s ease 1 slide-down;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.modal {
+    background: var(--color-white);
+    width: 1028px;
+    position: relative;
+    top: -45vh;
+
+    @include max1199 {
+        width: 90vw;
+    }
+
+    &__content {
+        background: var(--color-white);
+        padding: 0;
+        border-radius: 6px;
+        box-sizing: border-box;
+        border: none;
+        position: absolute;
+        width: 100%;
+    }
+
+    &__closeButton {
+        position: absolute;
+        right: -10px;
+        top: -15px;
+        background: var(--color-mercury);
+        border: none;
+        color: var(--color-dusty-gray);
+        font-size: 25px;
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &__body {
+        padding: 0 30px;
+        padding-bottom: 40px;
+    }
+    
+    &__banner {
+        height: 100%;
+        width: 96%;
+        padding: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__bannerImage {
+        object-fit: cover;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+    }
+    
+    &__bodyJoinNow {
+        background: var(--color-broom); 
+        display: block;
+        color: var(--color-white);
+        width: 160px;
+        font: 700 14px/45px Roboto, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        outline: 0 !important;
+        background-size: 350% 100%;
+        background-image: var(--color-green-haze-gradient);
+        transition: all .4s ease-in-out;
+        border-radius: 5px;
+        box-shadow: 0 3px 5px 0 var(--color-shadow-50);
+    
+        &:hover {
+            color: var(--color-white);
+            outline: none;
+            background-position: 100% 0;
+            transition: all .4s ease-in-out;
+        }
+    }
+    
+    &__tableContainer {
+        overflow: auto;
+        width: 100%;
+    }
+    
+    &__tableHead {
+        border-right: thin solid var(--color-alto2);
+        border-bottom: thin solid var(--color-alto2);
+        text-align: center;
+        background: var(--color-san-felix);
+        padding: 7px 10px;
+        color: var(--color-candlelight);
+    
+        &--borderTop {
+            border-top: none;
+        }
+    }
+    
+    &__table {
+        border-collapse: separate;
+        color: var(--color-dove-gray2);
+        font-size: 12px;
+        margin: 20px 0;
+        border-right: thin solid var(--color-alto2);
+        border-left: thin solid var(--color-alto2);
+        border-bottom: thin solid var(--color-alto2);
+        width: 77%;
+        display: inline-table;
+        text-align: center;
+        padding:0;
+        border-spacing: 0;
+    }
+    
+    &__tableBody {
+        & tr:nth-child(even){
+            background: var(--color-seashell);
+        }
+    }
+    
+    &__listContainer {
+        margin: 20px 0 0;
+        padding-left: 15px;
+    }
+    
+    &__tableData {
+        border: thin solid var(--color-alto2);
+        padding: 5px 10px;
+    }
+    
+    &__listItem {
+        font: 14px/18px;
+        color: var(--color-dove-gray2);
+        margin: 5px 0;
+    
+        &::marker {
+            unicode-bidi: isolate;
+            font-variant-numeric: tabular-nums;
+            text-transform: none;
+            text-indent: 0 !important;
+            text-align: start !important;
+            text-align-last: start !important;
+        }
+    }
+    
+    &__greenTextLink {
+        color: var(--color-fun-green);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+  
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

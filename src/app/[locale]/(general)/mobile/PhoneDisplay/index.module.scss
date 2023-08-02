@@ -1,0 +1,22 @@
+.phoneDisplay {
+  position: relative;
+  height: 723px;
+  width: 369px;
+  margin: 56px 0 0 auto;
+  @include max991 {
+    display: none;
+  }
+
+  &__container {
+    position: absolute;
+    z-index: 4;
+  }
+  
+  &__image {
+    position: absolute;
+    left: 13px;
+    top: 37px;
+    border-radius: 2px 2px 20px 20px;
+    z-index: 3;
+  }
+}

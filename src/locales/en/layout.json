@@ -1,0 +1,17 @@
+{
+	"header": {
+		"home": "Home",
+		"mobile": "Mobile",
+		"sportsbook": "Sports",
+		"virtual_sports": "Virtual Sports",
+		"esports": "Esports",
+		"casino_club": "Livecasino",
+		"slots": "Slots",
+		"games": "Games",
+		"lottery": "Lottery",
+		"promotions": "Promotions"
+	},
+	"footer": {
+		"all_rights_reserved": "All Rights reserved"
+	}
+}

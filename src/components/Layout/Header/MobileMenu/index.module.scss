@@ -1,0 +1,43 @@
+
+.display {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 128px;
+    left: 0;
+    z-index: 6;
+}
+
+@include max991 {
+    .display {
+        display: block;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    padding: 8px 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: var(--color-fun-green2);
+    border-bottom: 1px solid var(--color-salem);
+    background-image: var(--color-green-gradient);
+
+    &:hover,
+    &--active {
+        background: var(--color-fun-green2);
+    }
+}
+
+.link {
+    @extend %flex-row;
+
+    margin-left: 16px;
+}

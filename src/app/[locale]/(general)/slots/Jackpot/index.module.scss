@@ -1,0 +1,161 @@
+
+.progress {
+    background: var(--color-school-bus-yellow) ;
+    padding: 6px;
+    margin-bottom: 10px;
+    
+    &__wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:25px;
+        background: url("https://cdn.hanwei1234.com/Content/images/slot/NewLandingPage/light-horizontal.png") repeat-x,
+            url("https://cdn.hanwei1234.com/Content/images/slot/NewLandingPage/light-vertical.png") repeat-y,
+            url("https://cdn.hanwei1234.com/Content/images/slot/NewLandingPage/light-horizontal.png") repeat-x,
+            url("https://cdn.hanwei1234.com/Content/images/slot/NewLandingPage/light-vertical.png") repeat-y;
+        background-position: left top, top right, right bottom, bottom left;
+        border-radius: 10px;
+    }
+
+    &__countBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-school-bus-yellow);
+        text-transform: uppercase;
+        width: 100%;
+        border: 1px solid var(--color-nutmeg-wood);
+        box-shadow: inset 0 0 0 1px var(--color-broom);
+        margin: 5px 0;
+        padding:10px 0;
+        border-radius: 3px;
+        background: var(--color-nero);
+
+        & img{
+            margin-right: 10px;
+        }
+    }
+
+    &__money {
+        font-family: utm-akashi,sans-serif;
+        color: var(--color-chartreuse-yellow) ;
+        font-size: 24px;
+    }
+
+    &__diamond {
+        color: var(--color-school-bus-yellow);
+        font-size: 18px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+    }
+
+    &__horseshoe,
+    &__bell{
+        flex-basis: 49%;
+
+        & img{
+            margin-right: 2px;
+        }
+
+        & div:first-child{
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+
+    &__number {
+        margin-left: 10px;
+        font-family: utm-akashi,sans-serif;
+        letter-spacing: 1px;
+    }
+
+    &__moneyNumber {
+        letter-spacing: 5px;
+        margin-left: 10px;
+    }
+}
+
+.sliders{
+    height: 225px;
+    border: 5px solid var(--color-texas);
+    overflow: hidden;
+    background: var(--color-school-bus-yellow);
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+
+    &__title{
+        position: relative;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        background: var(--color-drop-gradient)
+    }
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-school-bus-yellow);
+        border: 1px solid var(--color-nutmeg-wood);
+        box-shadow: inset 0 0 0 1px var(--color-broom);
+        padding: 5px 10px;
+        margin: -1px 0;
+        border-radius: 3px;
+        background: var(--color-cod-gray);
+        
+    }
+
+    &__product{
+        display: flex;
+        align-items: center;
+        width: 170px;
+        font-size: 13px;
+
+        & img{
+            margin-right: 5px;
+        }
+    }
+
+    &__player{
+        display: flex;
+        color: var(--color-magic-mint);
+    }
+
+    &__amount{
+        display: flex;
+        margin-right: 15px;
+        font-size: 13px;
+
+        & img{
+            margin-right: 5px;
+        }
+    }
+}
+
+.progressImage{
+    position: relative !important;
+    width: auto !important;
+    height: 27px !important;
+
+    [data-lang="vn"] &{
+        height: 46px !important;
+    }
+}
+
+.winnersImage{
+    position: relative !important;
+    width: auto !important;
+    height: 28px !important;
+
+    [data-lang="vn"] &{
+        height: 25px !important;
+    }
+}
+

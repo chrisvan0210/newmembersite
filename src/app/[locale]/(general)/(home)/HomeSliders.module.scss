@@ -1,0 +1,110 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    max-width: 1200px;
+    @include max1199 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section {
+    width: 98%;
+    margin: 0 auto;
+    padding: 18px 0;
+    @include max1199 {
+        width: 90%;
+    }
+
+    @include max767 {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    &__title {
+        display: block;
+        font-size: 15;
+        padding: 8px 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(color--hint-of-green);
+        background: var(--color-green-gradient2);
+    }
+
+    &__content {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 54% 46%;
+        @include max1199 {
+            grid-template-columns: 32% 68%;
+        }
+
+        @include max767 {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__carouselImage {
+        height: 234px;
+        width: 100%;
+        @include max767 {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__list {
+        height: 240px;
+        overflow-y: hidden;
+    }
+   
+    &__item {
+        color: var(--color-aero-blue);
+        height: 40px;
+        padding: 2px 6px;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        background: var(--color-english-holly);
+        border-bottom: 1px solid var(--color-green-pea);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-white);
+            background: var(--color-fun-green2);
+        }
+    }
+}
+
+.list {
+    text-align: center;
+    @include max767 {
+        padding-right: 80px;
+    }
+    @include max575 {
+        padding-right: 40px;
+    }
+
+    &__data {
+        flex-direction: column;
+    }
+
+    &__name {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__amountContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2px;
+        color: var(--color-broom);
+    }
+
+    &__amount {
+        margin-inline: 4px;
+    }
+}

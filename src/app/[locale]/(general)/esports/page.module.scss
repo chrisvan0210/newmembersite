@@ -1,0 +1,69 @@
+
+.esportsContainer {
+    background: url("https://cdn.hanwei1234.com/Content/images/esports/bg-content.jpg") no-repeat bottom;
+}
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes flip-sides {
+    0% { transform: rotateY(0deg) }
+    
+    20% { transform: rotateY(20deg) }
+
+    50% { transform: rotateY(-10deg) }
+
+    75% { transform: rotateY(10deg) }
+
+    100% { transform: rotateY(0deg) }
+}
+
+.esportsContent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 1200px;
+    padding: 24px 0;
+    margin: 0 auto;
+    
+    @include max991 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        animation-name: zoom-in;
+        animation-duration: 800ms;
+    }
+
+    &__image {
+        margin: 0 auto;
+        animation: 1.5s ease-in-out 1s 1 flip-sides;
+        @include max767 {
+            height: 220px;
+            width: auto;
+        }
+        @include max575 {
+            height: 170px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--color-broom);
+        text-transform: uppercase;
+    }
+}

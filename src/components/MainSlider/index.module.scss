@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.slider {
+  height: 520px;
+  @include max767 {
+    height: 380px;
+  }
+  @include max575 {
+    height: 300px;
+  }
+
+  &__background {
+    background-size: cover !important;
+  }
+
+  &__contentBlock {
+    height: 520px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include max767 {
+      height: 380px;
+      width: 90%;
+    }
+    @include max575 {
+      height: 300px;
+    }
+  }
+
+  &__titleOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 17.5%;
+    background: var(--color-black-gradient);
+    @include max767 {
+      height: 22%;
+    }
+  }
+
+  &__title {
+    z-index: 100;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    top: 85%;
+    
+    @include max575 {
+      top: 80%;
+    }
+  }
+
+  &__content {
+    width: 48%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+
+    &--left {
+      margin-left: 0;
+    }
+
+    &--center {
+      margin: auto;
+    }
+  }
+
+  &__text {
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  &__textContainer {
+    height: 400px;
+  }
+
+  &__button {
+    height: 100px;
+    margin: 36px auto 0;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    &--offsetX {
+      margin: 0 0 0 30% !important;
+      @include max1399 {
+        margin: 0 0 0 55% !important;
+      }
+    }
+
+    &--solid {
+      border: none !important;
+      color: var(--color-white) !important;
+      background-image: var(--color-apple-gradient) !important;
+
+      &:hover {
+        background-image: var(--color-apple-gradient2) !important;
+      }
+    }
+  }
+}
+
+.slick {
+  position: absolute;
+  display: flex !important;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  top: 92%;
+  margin-left: -40px;
+  @include max767 {
+    flex-direction: column;
+    right: 4%;
+    left: unset;
+    top: 8%;
+  }
+
+  li {
+    margin: 0 6px;
+
+    // this removes the default slick page-marker
+    &::marker {
+      content: '';
+    }
+  }
+
+  button {
+    background-color: var(--color-white);
+    width: 80px;
+    height: 10px;
+    border: none;
+    opacity: 0.5;
+    box-shadow: 0 0 10px var(--color-black);
+    border-radius: 3px;
+    cursor: pointer;
+    @include max767 {
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      margin-top: 8px;
+    }
+  }
+
+  :global(li.slick-active) {
+    button {
+      opacity: 1;
+    }
+  }
+}

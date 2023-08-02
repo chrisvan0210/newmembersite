@@ -1,0 +1,201 @@
+.container{
+    background: url("https://cdn.hanwei1234.com/Content/images/winners/Fishermen-gold/fishing-winner-bg.jpg") top center no-repeat;
+    background-size: cover;
+    min-height: 1124px;
+    padding: 20px 5px;
+    text-align: center;
+}
+
+.pageName{
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-english-holly);
+    background: var(--color-broom);
+    height: 50px;
+    border-radius: 10px;
+    @include max575 {
+        max-width: 400px;
+        font-size: 16px;
+    }
+}
+
+.pageTitle{
+    margin: 30px 0;
+
+    &__cnImage{
+        max-width:380px ;
+        width: 100%;
+        height: auto;
+    }
+
+    &__image{
+        max-width:447px ;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.tableContainer{
+    position: relative;
+    width: 100%;
+    max-width: 986px;
+    min-height: 500px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid var(--color-tussock);
+    padding-bottom: 10px;
+    background:var(--color-zuccini2) url("https://cdn.hanwei1234.com/Content/images/winners/table-bg.jpg") top center no-repeat;
+    background-size: contain;
+
+    &__flareLeft{
+        position: absolute;
+        height: 438px;
+        width: 78px;
+        top: 0;
+        left: -40px;
+        z-index: 9;
+        background: url("https://cdn.hanwei1234.com/Content/images/winners//flare-winners.png") no-repeat;
+    }
+
+    &__flareRight{
+        position: absolute;
+        height: 300px;
+        width: 78px;
+        bottom: 0;
+        right: -40px;
+        z-index: 9;
+        background: url("https://cdn.hanwei1234.com/Content/images/winners//flare-right-winners.png") no-repeat;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        height: 200px;
+
+        @include max767{
+            height: 32vw;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 20px;
+        }
+    }
+
+    & h2{
+        margin: 0;
+        font-size: 30px;
+        color: var(--color-broom);
+        text-transform: uppercase;
+        text-shadow: 1.5px 2.5px 0 var(--color-salem2);
+        @include max991{
+            font-size: 20px;
+        }
+        @include max575 {
+            width: 100%;
+            font-size: 16px;
+        }
+            
+    }
+}
+
+.dropDown {
+    color: var(--color-broom);
+    background-color: var(--color-english-holly);
+    width: 300px;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+
+    &__options {
+        border: none;
+        outline: 1px solid var(--color-white-shadow-30);
+        border-radius: 0;
+
+    }
+
+    &__item{
+        text-align: left;
+        color: var(--color-broom);
+        background-color: var(--color-english-holly);
+        border: 0;
+        padding: 3px 10px;
+    }
+
+    &__selected{
+        border: 0;
+        @include max575 {
+            padding: 4px;
+        }
+    }
+    
+    @include max991{
+        width: 220px;
+        font-size: 14px;
+    }
+  
+}
+
+.table{
+    border: none;
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    color: var(--color-white);
+    max-width: 960px;
+    font-size: 18px;
+    margin: 0 auto;
+    font-weight: normal !important;
+
+    & tr:nth-last-of-type(odd) {
+        background: var(--color-evening-sea);
+    }
+
+    & tr:nth-last-of-type(even) {
+        background: var(--color-kaitoke-green2);
+    }
+
+    & th{
+        background: var(--color-english-holly);
+        color: var(--color-broom);
+        font-weight: 500;
+        padding:8px 0;
+    }
+
+    & td{
+        font-size: 20px;
+        padding: 30px 0;
+    }
+
+    @include max991 {
+        border: 1px solid transparent;
+        box-shadow: none;
+
+        thead{
+            display: none;
+        }
+
+        & td::before{
+            content: attr(data-label);
+            float: left;
+            font-size:12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        & td{
+            display: block;
+            text-align: right;
+            font-size: 14px;
+            padding: 10px;
+            border-bottom: 1px solid var(--color-white-shadow-50);
+        }
+    }
+}
+

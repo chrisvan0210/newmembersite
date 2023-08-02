@@ -1,0 +1,43 @@
+.subFooter {
+	@extend %flex-row;
+
+	color: var(--color-moss-green);
+	font-size: 11px;
+	width: 1170px;
+	padding: 32px 0;
+	justify-content: space-between;
+	align-items: start;
+	line-height: 1.5;
+	font-weight: 400;
+
+	@include max767 {
+		display: none;
+	}
+
+	@include max1199 {
+		width: 100%;
+	}
+
+	&__title {
+		font-weight: 900;
+	}
+	
+	&__subTitle {
+		margin: 0 0 11px;
+		font-weight: 700;
+	}
+	
+	&__content {
+		margin: 0 0 10px;
+	}
+
+	.subFooterItemWidth {
+		width: 25%;
+		padding: 0 18px;
+	}
+	
+}
+
+
+
+

@@ -1,0 +1,75 @@
+.button {
+    @extend %button;
+
+    width: 135px;
+    height: 32px;
+    border: none;
+    box-shadow: 0 0 5px var(--color-shadow-40);
+
+    &--small {
+        width: auto;
+        height: 28px;
+        font-size: 10;
+        padding: 4px 20px;
+        color: var(--color-granny-apple);
+        background: none;
+        border: thin solid var(--color-granny-apple);
+    
+        &:hover {
+            background: var(--color-sea-green);
+        }
+    }
+
+    &--large {
+        width: 165px;
+        height: 46px;
+        margin: 0 auto;
+    }
+
+    &--green {
+        background: var(--color-green-gradient);
+    }
+
+    &--yellow {
+        background: var(--color-amber-gradient);
+    }
+
+    &--greenTransparent {
+        @extend %hover-green;
+    
+        color: var(--color-kaitoke-green2);
+        border: 1px solid var(--color-kaitoke-green2);
+        background: none;
+    }
+
+    &--yellowTransparent {
+        @extend %hover-yellow;
+    
+        color: var(--color-broom);
+        border: 1px solid var(--color-broom);
+        background: none;
+    }
+
+    &--yellowTransparentToYellow {
+        @extend %hover-yellow2;
+    
+        color: var(--color-broom);
+        border: 1px solid var(--color-broom);
+        background: none;
+    }
+}
+
+@include max575 {
+    .button {
+        font-size: 12px;
+
+        &--sm {
+            padding: 2px 14px;
+        }
+
+        &--lg {
+            width: 145px;
+        }
+
+    }
+}

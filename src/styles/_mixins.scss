@@ -1,0 +1,145 @@
+/* #region BREAKPOINT MIXINS */
+@mixin max575 {
+  @media (width <= 575px) {
+    @content;
+  }
+}
+
+@mixin max767 {
+  @media (width <= 767px) {
+    @content;
+  }
+}
+
+@mixin max991 {
+  @media (width <= 991px) {
+    @content;
+  }
+}
+
+@mixin max1199 {
+  @media (width <= 1199px) {
+    @content;
+  }
+}
+
+@mixin max1399 {
+  @media (width <= 1399px) {
+    @content;
+  }
+}
+
+@mixin max1599 {
+  @media (width <= 1599px) {
+    @content;
+  }
+}
+
+/* #endregion BREAKPOINT MIXINS */
+
+/* #region EXTEND */
+%main-body {
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} 
+
+%center-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%center-x {
+  display: flex;
+  justify-content: center;
+}
+
+%center-y {
+  display: flex;
+  align-items: center;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+%button {
+  transition: all 0.5s ease;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 700;
+  margin-inline: 4px;
+  cursor: pointer;
+}
+
+%hover-green {
+  &:focus,
+  &:hover {
+    color: var(--color-white);
+    background: var(--color-green-haze);
+    background-image: var(--color-green-gradient);
+    border: none;
+  }
+}
+
+%hover-yellow {
+  &:focus,
+  &:hover {
+    color: var(--color-cola);
+    background: var(--color-broom);
+    background-image: var(--color-amber-gradient);
+    border: none;
+  }
+}
+
+%hover-yellow2 {
+  &:focus,
+  &:hover {
+    color: var(--color-cola);
+    background: var(--color-broom) !important;
+    background-image: var(--color-amber-gradient) !important;
+    border: none;
+  }
+}
+
+%mask {
+  @extend %center-xy;
+
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  background-color: var(--color-shadow-70);
+}
+
+%disabled {
+  filter: brightness(80%) grayscale(1) contrast(90%);
+}
+
+%info-center-container {
+  max-width: 960px;
+  margin: 12px auto;
+  background: var(--color-white);
+  @include max991 {
+    width: 95%;
+  }
+}
+
+/* #endregion EXTEND MIXINS */
+
+/* #region ANIMATION */
+@mixin animation-slide($name, $direction, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+        #{$direction} : $from
+    }
+
+    100% {
+      #{$direction} : $to
+    }
+  }
+}
+
+/* #endregion ANIMATION */

@@ -1,0 +1,123 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-shadow-80);
+    z-index: 9;
+}
+
+.modalWrapper {
+    animation: 0.5s ease 1 slide-down;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.modal {
+    width: 1100px;
+    position: relative;
+    top: -30vh;
+
+    @include max1199 {
+        width: 90vw;
+    }
+
+    &__content {
+        padding: 0;
+        border-radius: 6px;
+        box-sizing: border-box;
+        border: none;
+        position: absolute;
+        width: 100%;
+    }
+
+    &__headerContent {
+        @extend %center-xy;
+    }
+
+    &__closeButton {
+        position: absolute;
+        right: 140px;
+        top: -15px;
+        border: none;
+        background: none;
+        color: var(--color-white);
+        font-size: 25px;
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1;
+
+        @include max991 {
+            right: 0;
+        }
+    }
+
+    &__imageContainer {
+        @extend %center-xy;
+
+        width: 100%;
+        height: 100%;
+
+        @include max1199 {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    &__body {
+        padding: 0 30px;
+        padding-bottom: 40px;
+    }
+
+    &__bodyImage {
+        @extend %center-y;
+
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__bodyImageEuro, &__bodyImageAsia {
+        cursor: pointer;
+        transform: scale(.9);
+        transition: all 200ms linear 100ms, all 200ms ease-in-out 100ms;
+
+        &--selected,
+        &:hover {
+            transform: scale(1);
+            transition-delay: 0ms, 0ms;
+        }
+        
+    }
+
+    &__sports5Image,
+    &__euroImage,
+    &__asiaImage {
+        @include max991 {
+            object-fit: cover;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
+    }
+}
+  
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

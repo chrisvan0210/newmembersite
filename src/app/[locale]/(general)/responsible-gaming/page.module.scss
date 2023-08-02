@@ -1,0 +1,37 @@
+.responsibleGaming {
+    @extend %center-xy;
+
+    flex-flow: column wrap;
+    line-height: 20px;
+
+    &__container {
+        width: 1140px;
+
+        @include max1199{
+            width: calc(100% - 40px);
+            padding: 0 20px;
+        }
+    }
+
+    &__header {
+        background-color: var(--color-fun-green);
+        padding: 12px 0 12px 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        font-size: 0.7em;
+        color: var(--color-white);
+    }
+
+    &__content {
+        padding: 30px;
+    }
+
+    &__yellowText {
+        font-weight: 700;
+    }
+
+    &__yellowText,
+    &__link {
+        color: var(--color-broom);
+    }
+}

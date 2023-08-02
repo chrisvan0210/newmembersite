@@ -1,0 +1,648 @@
+@mixin dragon-ball-default-style {
+    background-size: contain;
+    position: absolute;
+    animation-name: floating-2;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@mixin frieza-circle-default-style {
+    border-radius: 50%;
+    behavior: url("https://www.fb88big.com/Content/images/slot/queenslot/PIE.htc");
+    width: 60px;
+    height: 60px;
+    background: var(--color-white-shadow-100);
+    background: radial-gradient(ellipse at center,var(--color-white) 0%,var(--color-white) 50%,var(--color-mauve) 51%,var(--color-heliotrope) 71%,var(--color-wisteria) 100%);
+    filter: blur(15px) drop-shadow(0 0 1px var(--color-totem-pole-shadow-100));
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+@mixin frieza-particles-default-style {
+    background-blend-mode: screen;
+    mix-blend-mode: screen;
+    width: 210px;
+    height: 172px;
+    position: absolute;
+    background: url("https://www.fb88big.com/Content/images/slot/queenslot/dust-2.png") top center no-repeat;
+    top: 25%;
+    left: 19%;
+}
+
+@mixin goku-circle-default-style {
+    border-radius: 50%;
+    behavior: url("https://www.fb88big.com/Content/images/slot/queenslot/PIE.htc");
+    width: 150px;
+    height: 150px;
+    background: var(--color-azure-radiance);
+    filter: blur(20px);
+    position: absolute;
+    top: 64%;
+    left: 15%;
+}
+
+@mixin goku-particles-default-style {
+    background-blend-mode: screen;
+    mix-blend-mode: screen;
+    width: 210px;
+    height: 172px;
+    position: absolute;
+    background: url("https://www.fb88big.com/Content/images/slot/queenslot/dust.png") top center no-repeat;
+    top: 64%;
+    left: 15%;
+}
+
+@mixin lightning-default-style {
+    background-blend-mode: screen;
+    mix-blend-mode: screen;
+    width: 120px;
+    height: 140px;
+    position: absolute;
+    background: url("https://www.fb88big.com/Content/images/slot/queenslot/lightning.gif") top center no-repeat;
+    background-size: contain;
+    opacity: 1;
+}
+
+.queenSlots {
+    height: 772px;
+    width: 100%;
+    background: var(--color-fun-green5) url("https://www.fb88big.com/Content/images/slot/queenslot/dragon-bg.jpg") top center no-repeat;
+    overflow: hidden;
+
+    &__contentContainer {
+        position: relative;
+    }
+
+    &__animationContainer {
+        position: absolute;
+        height: 571px;
+        width: 100%;
+        max-width: 660px;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+        @include max1199 {
+            left: -15%;
+            width: 100%;
+        }
+
+        @include max767 {
+            left: -55%;
+        }
+    }
+
+    &__dragonBalls5 {
+        @include dragon-ball-default-style;
+
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/ball-5.png") top center no-repeat;
+        width: 99px;
+        height: 99px;
+        left: 150%;
+        top: 39%;
+        animation-duration: 4s;
+        z-index: 2;
+    }
+
+    &__dragonBalls4 {
+        @include dragon-ball-default-style;
+
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/ball-4.png") top center no-repeat;
+        width: 95px;
+        height: 95px;
+        left: 54%;
+        bottom: 0;
+        animation-duration: 5s;
+    }
+
+    &__dragonBalls1 {
+        @include dragon-ball-default-style;
+
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/ball-1.png") top center no-repeat;
+        width: 42px;
+        height: 42px;
+        left: 42%;
+        top: 57%;
+        animation-duration: 6s;
+    }
+
+    &__frieza {
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/frieza.png") top center no-repeat;
+        width: 229px;
+        height: 320px;
+        background-size: contain;
+        position: absolute;
+        left: 80%;
+        top: 21%;
+    }
+
+    &__friezaSaiyan {
+        background-blend-mode: screen;
+        mix-blend-mode: screen;
+        width: 480px;
+        height: 450px;
+        position: absolute;
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/AqIwa-3.gif") top center no-repeat;
+        background-size: cover;
+        top: -45%;
+        left: -60%;
+        opacity: 1;
+        z-index: 0;
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+    &__friezaCircle1 {
+        @include frieza-circle-default-style;
+
+        animation: energy-ball 7s ease infinite;
+        animation: energy-ball-3 7s ease infinite;
+    }
+
+    &__friezaCircle2 {
+        @include frieza-circle-default-style;
+
+        animation: energy-ball-3 8s ease infinite;
+        animation-delay: .2s;
+        opacity: 0;
+    }
+
+    &__friezaCircle3 {
+        @include frieza-circle-default-style;
+
+        animation: energy-ball-3 20s ease infinite;
+        animation-delay: .4s;
+        opacity: 0;
+    }
+
+    &__friezaCircle4 {
+        @include frieza-circle-default-style;
+
+        animation: energy-ball-3 15s ease infinite;
+        animation-delay: .6s;
+        opacity: 0;
+    }
+
+    &__friezaCircle5 {
+        @include frieza-circle-default-style;
+
+        animation: energy-ball-3 10s ease infinite;
+        animation-delay: .8s;
+        opacity: 0;
+    }
+
+    &__friezaCircle6 {
+        @include frieza-circle-default-style;
+
+        animation: energy-ball-3 5s ease infinite;
+        animation-delay: 1s;
+        opacity: 0;
+    }
+
+    &__friezaCircle7 {
+        @include frieza-circle-default-style;
+
+        filter: blur(15px) drop-shadow(0 0 1px var(--color-white-shadow-70)) brightness(1.2);
+        animation: energy-ball-2 8s ease infinite;
+        opacity: 1;
+    }
+
+    &__friezaParticles1 {
+        @include frieza-particles-default-style;
+
+        animation: particles-2 6s ease infinite;
+        opacity: 0;
+    }
+
+    &__friezaParticles2 {
+        @include frieza-particles-default-style;
+
+        animation: particles 7.8s ease infinite;
+        animation: particles-2 7.8s ease infinite;
+        animation-delay: .2s;
+        opacity: 0;
+    }
+
+    &__friezaParticles3 {
+        @include frieza-particles-default-style;
+
+        animation: particles-2 4s ease infinite;
+        opacity: 0;
+    }
+
+    &__friezaParticles4 {
+        @include frieza-particles-default-style;
+
+        animation: particles-2 18s ease infinite;
+        opacity: 0;
+    }
+
+    &__friezaParticles5 {
+        @include frieza-particles-default-style;
+
+        animation: particles-2 21s ease infinite;
+        opacity: 0;
+    }
+
+    &__friezaParticles6 {
+        @include frieza-particles-default-style;
+
+        animation: particles-2 3s ease infinite;
+        animation-delay: .8s;
+        opacity: 0;
+    }
+
+    &__friezaParticles7 {
+        @include frieza-particles-default-style;
+
+        animation: particles-2 10s ease infinite;
+        opacity: 0;
+    }
+
+    &__laptopStreetFighter {
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/laptops.png") top center no-repeat;
+        width: 824px;
+        height: 519px;
+        background-size: contain;
+        position: absolute;
+        left: 32%;
+        top: 44%;
+        animation-name: xxx;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    &__goku {
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/goku.png") top center no-repeat;
+        width: 306px;
+        height: 364px;
+        background-size: contain;
+        position: absolute;
+        left: 109%;
+        top: 4%;
+    }
+
+    &__saiyan {
+        background-blend-mode: screen;
+        mix-blend-mode: screen;
+        will-change: background-blend-mode;
+        width: 480px;
+        height: 550px;
+        position: absolute;
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/AqIwa-2.gif") top center no-repeat;
+        background-size: cover;
+        top: -35%;
+        left: -30%;
+        opacity: .9;
+        filter: brightness(1.2);
+    }
+
+    &__lightning1 {
+        @include lightning-default-style;
+
+        top: 10%;
+        left: 20%;
+        transform: rotate(-36deg);
+        filter: brightness(1.8);
+    }
+
+    &__lightning2 {
+        @include lightning-default-style;
+
+        top: 30%;
+        left: 2%;
+        transform: rotate(26deg);
+        filter: brightness(1.8);
+    }
+
+    &__lightning3 {
+        @include lightning-default-style;
+
+        width: 50px;
+        height: 50px;
+        top: 35%;
+        left: 45%;
+        transform: rotate(-26deg);
+        filter: brightness(2.8);
+    }
+
+    &__gokuCircle1 {
+        @include goku-circle-default-style;
+
+        animation: energy-ball 8s ease infinite;
+        animation-delay: .2s;
+        opacity: 0;
+    }
+
+    &__gokuCircle2 {
+        @include goku-circle-default-style;
+
+        animation: energy-ball 8s ease infinite;
+        animation-delay: .2s;
+        opacity: 0;
+    }
+
+    &__gokuCircle3 {
+        @include goku-circle-default-style;
+
+        background: var(--color-cyan-aqua);
+        filter: blur(30px);
+        animation: energy-ball 20s ease infinite;
+        animation-delay: .4s;
+        opacity: 0;
+    }
+
+    &__gokuCircle4 {
+        @include goku-circle-default-style;
+
+        background: var(--color-dodger-blue);
+        animation: energy-ball 15s ease infinite;
+        animation-delay: .6s;
+        opacity: 0;
+    }
+
+    &__gokuCircle5 {
+        @include goku-circle-default-style;
+
+        animation: energy-ball 10s ease infinite;
+        animation-delay: .8s;
+        opacity: 0;
+    }
+
+    &__gokuCircle6 {
+        @include goku-circle-default-style;
+
+        background: #009fb7;
+        animation: energy-ball 5s ease infinite;
+        animation-delay: 1s;
+        opacity: 0;
+    }
+
+    &__gokuCircle7 {
+        @include goku-circle-default-style;
+
+        background: var(--color-yellow);
+        background: radial-gradient(var(--color-white),var(--color-yellow),var(--color-totem-pole));
+        background: radial-gradient(var(--color-dodger-blue2),var(--color-anakiwa),var(--color-picton-blue));
+        filter: blur(15px) drop-shadow(0 0 1px var(--color-totem-pole-shadow-100));
+        animation: energy-ball-2 6s ease infinite;
+        opacity: 1;
+    }
+
+    &__gokuParticles1 {
+        @include goku-particles-default-style;
+
+        animation: particles 6s ease infinite;
+        opacity: 0;
+    }
+
+    &__gokuParticles2 {
+        @include goku-particles-default-style;
+
+        animation: particles 7.8s ease infinite;
+        animation-delay: .2s;
+        opacity: 0;
+    }
+
+    &__gokuParticles3 {
+        @include goku-particles-default-style;
+
+        animation: particles 4s ease infinite;
+        opacity: 0;
+    }
+
+    &__gokuParticles4 {
+        @include goku-particles-default-style;
+
+        animation: particles 18s ease infinite;
+        opacity: 0;
+    }
+
+    &__gokuParticles5 {
+        @include goku-particles-default-style;
+
+        animation: particles 21s ease infinite;
+        opacity: 0;
+    }
+
+    &__gokuParticles6 {
+        @include goku-particles-default-style;
+
+        animation: particles 3s ease infinite;
+        animation-delay: .8s;
+        opacity: 0;
+    }
+
+    &__gokuParticles7 {
+        @include goku-particles-default-style;
+
+        animation: particles 10s ease infinite;
+        opacity: 0;
+    }
+
+    &__chunli {
+        background: url("https://www.fb88big.com/Content/images/slot/queenslot/chuli.png") top center no-repeat;
+        width: 256px;
+        height: 305px;
+        background-size: contain;
+        position: absolute;
+        left: 130%;
+        top: 69%;
+    }
+
+    &__highJackpots {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__highJackpotsContent {
+        padding-top: 3%;
+        position: absolute;
+        right: 17.5%;
+        text-align: center;
+        z-index: 3;
+
+        @include max1199 {
+            right: 0;
+            padding-top:80px;
+            width: 100%;
+            background-color: var(--color-holly-60);
+            height: 100vh;
+            z-index: 5;
+        }
+    }
+
+    &__highJackpotsLogo {
+        background: url("https://cdn.hanwei1234.com/Content/images/casino/games/landing-page/queeSlotLogo.png") no-repeat center;
+        background-size: contain;
+        width: 464px;
+        height: 305px;
+        position: relative;
+
+        @include max1199 {
+            margin: 0 auto;
+        }
+    }
+
+    &__highJackpotsText {
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        position: relative;
+        z-index: 99;
+        letter-spacing: -1px;
+        font-weight: bold;
+        line-height: 1.2;
+        color: var(--color-broom);
+        text-shadow: -5px 2px 4px var(--color-camarone2);
+
+        @include max767 {
+            font-size: 20px;
+        }
+    }
+
+    &__highJackpotsFont {
+        text-transform: uppercase;
+        font-size: 2em; 
+    }
+
+    &--mediumFontSize {
+        font-size: 1.2em;
+    }
+
+    &__highJackpotsSubText {
+        font-size: 32px;
+        display: block;
+        text-align: center;
+        position: relative;
+        z-index: 99;
+        letter-spacing: -2px;
+        font-weight: 400;
+        color: var(--color-white);
+        margin-bottom: 20px;
+        text-shadow: -5px 2px 4px var(--color-camarone2); 
+
+        @include max767 {
+            font-size: 22px;
+        }
+    }
+
+    &__highJackpotsMoreDetails {
+        width: 155px;
+        height: 43px;
+        line-height: 43px;
+        background: none;
+        color: var(--color-broom);
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 1s ease;
+        border: 1px solid var(--color-broom);
+        border-radius: 4px;
+
+        &:hover, &:focus {
+            background: var(--color-broom);
+            color: #2b2700;
+            background-image: var(--color-amber-gradient);
+        }
+    }
+}
+
+@keyframes energy-ball {
+    0% {
+        opacity:0;transform:scale(1)
+    }
+    
+    40% {
+        opacity:.5;
+        transform:scale(1)
+    }
+    
+    100% {
+        opacity:0;
+        transform:scale(.4)
+    }
+}
+
+@keyframes energy-ball-2 {
+    0% {
+        transform:scale(.4);
+        filter:blur(15px) drop-shadow(0 0 1px var(--color-white-shadow-70)) brightness(1)
+    }
+    
+    40% {
+        transform:scale(.6);
+        filter:blur(15px) drop-shadow(0 0 1px var(--color-white-shadow-70)) brightness(1.2)
+    }
+    
+    100% {
+        transform:scale(.4);
+        filter:blur(15px) drop-shadow(0 0 1px var(--color-white-shadow-70)) brightness(1)
+    }
+}
+
+@keyframes energy-ball-3 {
+    0% {
+        opacity:0;
+        transform:scale(.4)
+    }
+    
+    40% {
+        opacity:.8;
+        transform:scale(1)
+    }
+    
+    100% {
+        opacity:0;
+        transform:scale(.4)
+    }
+}
+@keyframes particles {
+    0% {
+        opacity:1;
+        transform:scale(1.2) rotate(0deg);
+        filter:brightness(5)
+    }
+    
+    100% {
+        opacity:0;
+        transform:scale(0) rotate(35deg);
+        filter:brightness(1)
+    }
+}
+
+@keyframes particles-2 {
+    0% {
+        opacity:1;
+        transform:scale(1.2) rotate(0deg);
+        filter:brightness(5)
+    }
+    
+    100% {
+        opacity:0;
+        transform:scale(0) rotate(-35deg);
+        filter:brightness(1)
+    }
+}
+
+@keyframes floating-2 {
+    0% {
+        transform:translateY(0%);
+        filter:brightness(1)
+    }
+    
+    50% {
+        transform:translateY(-20%);
+        filter:brightness(1.2)
+    }
+    
+    100% {
+        transform:translateY(0%);
+        filter:brightness(1)
+    }
+}

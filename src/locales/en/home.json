@@ -1,0 +1,8 @@
+{
+	"welcome": "Welcome, this is client page",
+	"counter": {
+		"increment": "Increment",
+		"decrement": "Decrement"
+	},
+	"title": "Home123"
+}

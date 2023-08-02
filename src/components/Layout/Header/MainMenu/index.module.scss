@@ -1,0 +1,52 @@
+.menu {
+	@extend %center-xy;
+
+	padding: 2px 8px 2px 0;
+
+	&__link {
+		@extend %flex-row;
+
+		text-align: center;
+		margin: 0 3px;
+		color: var(--color-white);
+		@include max1199 {
+			margin: 0 4px;
+		}
+
+		&:hover,
+		&:active,
+		&--active {
+			text-shadow: 0 0 5px var(--color-broom), 
+				0 0 5px var(--color-broom), 0 0 2px var(--color-broom);
+		}
+	}
+
+	&__icon {
+		@include max1199 {
+			display: none;
+		}
+	}
+
+	&__label {
+		font-size: 12px;
+		text-transform: uppercase;
+
+		&--offset {
+			font-size: 16px;
+			margin-inline: 4px;
+		}
+
+		&--hide {
+			display: none;
+			@include max1199 {
+				display: block;
+			}
+		}
+	}
+}
+
+@include max991 {
+	.menu {
+		display: none;
+	}
+}

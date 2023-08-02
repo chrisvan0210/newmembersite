@@ -1,0 +1,143 @@
+
+.contactUs {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0 36px;
+  background: var(--color-bottle-green2) url('https://cdn.hanwei1234.com/Content/images/contUsBG.png') no-repeat top right;
+  box-shadow: 0 0 8px 2px var(--color-bottle-green2) inset;
+  @include max1399 {
+    width: 90%;
+    padding: 24px 60px 36px;
+  }
+  @include max767 {
+    width: 85%;
+    background: var(--color-bottle-green2);
+    padding: 20px 30px 30px;
+  }
+
+  &__contentContainer {
+    padding: 24px 12px;
+  }
+
+  &__header {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 24px 0;
+  }
+
+  &__content {
+    width: 500px;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 24px;
+    @include max767 {
+      margin: 12px auto;
+      width: 100%;
+    }
+  }
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  padding: 24px auto;
+  @include max767 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form {
+    font-weight: 600;
+    padding: 40px;
+    background: var(--color-white);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__label {
+    margin: 8px 0 4px;
+  }
+
+  &__button {
+    width: 200px !important;
+    height: 42px !important;
+    margin: 24px auto !important;
+    color: var(--color-white);
+    background: var(--color-observatory-gradient);
+  }
+
+  &__support {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-crusoe);
+  }
+
+  &__supportRow {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 24px auto;
+    align-items: center;
+  }
+
+  &__supportImages {
+    width: 85%;
+    height: auto;
+    @include max767 {
+      width: 60%;
+      margin-right: auto;
+    }
+  }
+
+  &__supportDetails {
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+  }
+
+  &__supportDetailsHeader {
+    font-weight: 700;
+  }
+
+  &__liveChat {
+    cursor: pointer;
+    color: var(--color-broom);
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__supportChats {
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+}
+
+.yellow {
+  color: var(--color-broom);
+  font-weight: 600;
+}
+
+.modalTitle {
+  color: var(--color-white);
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.modalImage {
+  display: flex;
+  margin: 6px auto;
+}

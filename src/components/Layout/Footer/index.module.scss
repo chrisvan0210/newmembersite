@@ -1,0 +1,273 @@
+.container {
+	background: var(--color-bottle-green) url('/static/images/footer/web-footer-bg.jpg') top center no-repeat;
+	background-size: cover;
+	padding-top: 40px;
+	@include max1599 {
+		background: var(--color-bottle-green) url('/static/images/footer/web-footer-bg-sm.jpg') top center no-repeat;
+	}
+	
+	&__top {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	&__bottom {
+		@extend %center-xy;
+
+		background: var(--color-holly-80);
+		height: 50px;
+		padding: 5px 10px;
+		color: var(--color-white);
+	}
+}
+
+.mainContents {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	@include max991 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.description {
+	padding: 0 15px;
+	font-size: 13px;
+	color: var(--color-cornflower-blue);
+	position: relative;
+
+	&__img {
+		text-align: center;
+
+		img {
+			width: 175px;
+			height: auto;
+			margin: 0 auto;
+			object-fit: 'contain';
+		}
+	}
+
+	p {
+		margin-bottom: 20px;
+		font-size: 12px;
+		line-height: 1.8;
+		@include max1199 {
+			text-align: center;
+		}
+	}
+
+	&__browser {
+		text-align: center;
+
+		a {
+			padding: 0 10px;
+		}
+	}
+}
+
+.information {
+	@extend %info-container;
+
+	@include max991 {
+		justify-content: center;
+		margin-top: 15px;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		@include max991 {
+			flex-direction: column;
+		}
+	}
+}
+
+.infoLeft,
+%info-left {
+	padding-left: 15px;
+	width: 60%;
+	@include max991 {
+		display: flex;
+		width: 100%;
+		padding-left: 0;
+		font-size: 12px;
+	}
+}
+
+.leftItem,
+%left-item {
+	display: block;
+	margin-bottom: 10px;
+	@include max991 {
+		position: relative;
+		padding: 0 5px;
+
+		&:not(:first-child) {
+			&::before {
+				clear: both;
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				background: var(--color-cornflower-blue);
+				width: 1px;
+				height: 10px
+			}
+		}
+	}
+
+	&:hover {
+		color: var(--color-broom) !important;
+	}
+}
+
+.infoRight {
+	@extend %info-left;
+
+	width: 40%;
+	padding-left: 0;
+	@include max991 {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+.rightItem {
+	@extend %left-item;
+	@include max991 {
+		&::before {
+			clear: both;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			background: var(--color-cornflower-blue);
+			width: 1px;
+			height: 10px
+		}
+	}
+}
+
+.partner {
+	@extend %info-container;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	@include max991 {
+		margin-top: 15px;
+	}
+
+	&__logo {
+		text-align: center;
+	}
+
+	&__bottom {
+		margin-top: auto;
+		@include max991 {
+			margin-top: 12px;
+		}
+	}
+
+	&__logo2 {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__item {
+		vertical-align: middle;
+		line-height: 40px !important;
+		object-fit: contain;
+	}
+}
+
+.sportsLogos {
+	font-size: 0;
+	text-align: center;
+	margin-top: 40px;
+	padding-bottom: 24px;
+
+	&__image {
+		&:hover {
+			top: -4px;
+		}
+
+		display: inline-block;
+		margin: 2px 22px ;
+		position: relative;
+		top: 0;
+		transition: 200ms ease-in-out;
+		object-fit: contain;
+
+		@include max1199 {
+			height: 44px;
+			width: auto;
+		}
+
+	}
+}
+
+.payment {
+	@extend %info-container;
+
+	position: relative;
+	@include max991 {
+		margin-top: 15px;
+	}
+}
+
+.btnSwitchMobile {
+	display: none;
+
+	@extend %hover-yellow;
+
+	@include max767 {
+		margin: 10px auto 0;
+		display: block;
+	}
+  
+}
+
+// PLACE HOLDER FOR EXTEND
+%info-container {
+	padding: 0 15px;
+	font-size: 13px;
+	color: var(--color-cornflower-blue);
+	position: relative;
+
+	&::before {
+		clear: both;
+		content: '';
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 160px;
+		background: var(--color-white-20);
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		@include max991 {
+			display: none;
+		}
+	}
+
+	label {
+		color: var(--color-paris-daisy);
+		display: block;
+		font-weight: 700;
+		padding-top: 5px;
+		padding-bottom: 20px;
+		@include max991 {
+			text-align: center;
+		}
+	}
+}

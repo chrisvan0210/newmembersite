@@ -1,0 +1,63 @@
+.promotions {
+    &__spacer {
+        margin-left: 200px;
+    }
+
+    &__marqueeText {
+        color: var(--color-white);
+        font-size: 11px;
+        width: fit-content;
+        animation: marquee 120s linear infinite;
+        white-space: nowrap;
+        position: relative;
+        top: -9px;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    &__panelMarquee {
+        margin: 0 0 15px;
+        display: flex;
+        flex-direction: row;
+
+        @include max767 {
+            display: none;
+        }
+    }
+
+    &__panelAnnouncement {
+        background: var(--color-fun-green7);
+        color: var(--color-broom);
+        height: 20px;
+        line-height: 20px;
+        padding: 0 15px;
+        font-size: 11px;
+        display: flex;
+        white-space: nowrap;
+        justify-content: space-between;
+    }
+
+    &__microphone {
+        padding-left: 12px;
+    }
+
+    &__panelParagraph {
+        overflow: hidden;
+        margin: 0;
+        height: 20px;
+        background: var(--color-camarone3);
+        cursor: pointer;
+    } 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%)
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

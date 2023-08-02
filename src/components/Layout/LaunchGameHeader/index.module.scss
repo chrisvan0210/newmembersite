@@ -1,0 +1,97 @@
+.header {
+    @extend %center-xy;
+
+    position: fixed;
+    padding: 5px 10px;
+    top: 0;
+    width: 100%;
+    color: var(--color-white);
+    background: var(--color-fun-green);
+    z-index: 8;
+
+    &--sports3 {
+        background: var(--color-black-gradient2);
+    }
+
+    @include max1199 {
+        margin-top: 50px;
+    }
+
+    &__content {
+        @extend %center-y;
+
+        justify-content: space-between;
+        width: 1200px;
+
+        @include max1399 {
+            width: 95%;
+        }
+
+        @include max1199 {
+            flex-flow: column;
+            gap:20px;
+        }
+    }
+
+    &__rightContent {
+        @extend %center-xy;
+
+        @include max1199 {
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+    }
+
+    &__leftSectionContent {
+        @extend %center-xy;
+    }
+
+    &__form {
+        @extend %center-xy;
+
+        @include max1199 {
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+    }
+
+    &__input {
+        width: 149px;
+        height: 28px;
+        padding-left: 20px;
+        margin-right: 10px;
+    }
+
+    &__loginButton {
+        background: var(--color-fun-green2);
+        line-height: 30px;
+        font-weight: normal !important;
+        color: var(--color-white);
+        background-image: var(--color-observatory-gradient);
+    }
+
+    &__registerButton {
+        &:hover {
+            color: var(--color-bay-of-many);
+        }
+    }
+
+    &__localSwitcher {
+        border-left: var(--color-fun-green2) 1px solid;
+        border-right: var(--color-fun-green2) 1px solid;
+        margin: 0 5px;
+    }
+
+    &__instructLink {
+        @extend %center-y;
+    }
+
+    &__instructLink,
+    &__instructImage {
+        margin-right: 5px;
+    }
+
+    &__buttonLabel {
+        display: inline-block;
+    }
+}

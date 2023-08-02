@@ -1,0 +1,422 @@
+@mixin subtitle-default-style {
+    color: var(--color-white);
+    font-weight: 400;
+    line-height: 65px;
+    font-size: 21px;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin check-button-default-style {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 0 10%;
+    z-index: 2;
+    position: relative;
+}
+
+.welcome {
+    @extend %center-y;
+
+    flex-direction: column;
+    padding-top: 50px;
+    text-align: center;
+
+    &--vietnam {
+        background: url("https://www.fb88big.com/Content/images/countdown_happyHour.jpg") no-repeat;
+        background-size: cover;
+        padding: 10px 0 50px;
+    }
+
+    &__headerTextContainer {
+        width: 400px;
+        font-size: 14px;
+
+        &--vietnam {
+            width: 100%;
+        }
+    }
+
+    &__headerTitle {
+        color: var(--color-broom);
+        font-size: 1.875em;
+        line-height: 10px;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        &--vietnam {
+            @include subtitle-default-style;
+
+            text-transform: capitalize;
+
+            @include max767 {
+                font-size: 1.438em;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &__headerSubTitle {
+        @include subtitle-default-style;
+
+        &--vietnam {
+            color: var(--color-broom);
+            font-size: 2.5em;
+            line-height: 1.5;
+            font-weight: 600;
+
+            @include max767 {
+                font-size: 2.813em;
+                margin-bottom: 20px;
+            }
+
+            @include max575 {
+                font-size: 2.3em;
+            }
+        }
+    }
+
+    &__timerBody {
+        padding: 0 50px 50px;
+        width: 818px;
+        height: 813px;
+        background: url("https://www.fb88big.com/Content/images/countdown_happyHourCenter.png") no-repeat center;
+
+        @include max767 {
+            background:var(--color-county-green3);
+            width: 85%;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            height: 90%;
+        }
+    }
+
+    &__timerTopContent {
+        margin-bottom: 25px;
+    }
+
+    &__timerHeaderText {
+        font-size: 1.75em;
+        font-weight: bold;
+        font-style: italic;
+        line-height: normal;
+        margin-top: 95px;
+        color:var(--color-white);
+
+        @include max767 {
+            font-size: 2.5em;
+            margin-top: 15px;
+        }
+    }
+
+    &__timerHeaderSubText {
+        font-size: 1.25em;
+
+        @include max767 {
+            font-size: 1.1em;
+        }
+    }
+
+    &__timerMiddleContent {
+        @include max767 {
+            width: 100%;
+            background: var(--color-fun-green10);
+        }
+    }
+
+    &__timerBox {
+        @extend %center-xy;
+
+        flex-direction: column;
+        font-size: 125px;
+        font-weight: bold;
+        color: var(--color-white);
+        text-align: center;
+        background: url("https://www.fb88big.com/Content/images/countdowntimerBg.png") no-repeat center;
+        background-size: contain;
+        max-width: 507px;
+        height: 255px;
+        overflow: hidden;
+        margin: 0 auto;
+
+        @include max575 {
+            padding-top: 10px;
+        }
+    }
+
+    &__timerBoxTitle {
+        @extend %center-y;
+
+        justify-content: space-around;
+        padding: 0;
+        font-size: 23px;
+        font-weight: normal;
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: -30px;
+
+        @include max575 {
+            margin-bottom: 0;
+            margin-top: -25px;
+        }
+    }
+
+    &__timerBottomContent {
+        @extend %center-y;
+
+        flex-direction: column;
+    }
+
+    &__textVerifyContainer {
+        @extend %center-xy;
+        
+        padding: 12px 0;
+        text-decoration: none;
+        font-family: Poppins, sans-serif;
+        font-size: 25px;
+        background: var(--color-fun-green);
+        transform: skewX(-15deg);
+        transition: 0.5s;
+        box-shadow: 6px 6px 0 var(--color-broom);
+        color: var(--color-broom);
+        outline: none;
+        width: 300px;
+        margin: 10px 0;
+    }
+
+    &__textVerify {
+        transform: skewX(15deg);
+    }
+
+    &__arrow {
+        width: 20px;
+        margin-left: 15px;
+        position: relative;
+        top: 12%;
+        transition: 0.5s;
+        margin-right: 25px;
+    }
+
+    &__runningArrow {
+        animation: color-change 1s infinite alternate;
+    }
+
+    &__checkButtons {
+        @extend %center-xy;
+
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__dashedLine {
+        border-bottom: 3px dashed var(--color-broom);
+        width: 22%;
+        position: absolute;
+        top: 40%;
+        left: 39%;
+        z-index: 1;
+    }
+
+    &__checkButton1 {
+        @include check-button-default-style;
+
+        background: var(--color-broom) url("https://www.fb88big.com/Content/images/mobile-check.png") no-repeat 50% 21%;
+    }
+
+    &__checkButton2 {
+        @include check-button-default-style;
+
+        background: var(--color-broom) url("https://www.fb88big.com/Content/images/mail-check.png") no-repeat 50% 31%;
+    }
+
+    &__checkButtonText {
+        position: absolute;
+        bottom: 0;
+        left: -15%;
+        background: var(--color-fun-green);
+        width: 130px;
+        border: 1px solid var(--color-jewel2);
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        color: var(--color-white);
+        text-transform: uppercase;
+    }
+
+    &__bottomParagraph {
+        color: var(--color-broom);
+        text-align: center;
+        font-size: 15px;
+        padding: 5px;
+        max-width: 480px;
+        margin: 0 auto;
+        line-height: 1.5em;
+    }
+
+    &__yellowButtonCountdown {
+        background: var(--color-broom);
+        color: var(--color-verdun-green);
+        display: inline-block;
+        width: 184px;
+        height: 48px;
+        line-height: 48px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 15px;
+
+        &:hover {
+            color: var(--color-verdun-green);
+            background: var(--color-ronchi);
+        }
+    }
+
+    &__promoBonus {
+        @extend %center-xy;
+
+        background: var(--color-camarone5);
+        width: 600px;
+        height: 152px;
+        padding: 0 0 0 10px;
+        margin-top: 40px;
+
+        @include max767 {
+            flex-direction: column;
+            height: 100%;
+            padding: 10px;
+            max-width: 350px;
+        }
+    }
+
+    &__promoLink {
+        @include max767 {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    &__promoImage {
+        @include max767 {
+            object-fit: cover;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
+    }
+
+    &__bonusContent {
+        @extend %center-y;
+
+        flex-direction: column;
+        width: 317px;
+        padding: 20px;
+    }
+
+    &__bonusPercent {
+        color: var(--color-broom);
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &__bonusTitle {
+        color: var(--color-white);
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &__bonusDescription {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    &__yellowText {
+        color: var(--color-lemon3);
+        text-decoration: none;
+    }
+
+    &__bottomContent {
+        padding: 50px;
+
+        &--vietnam {
+            @extend %center-xy;
+
+            width: 100%;
+        }
+    }
+
+    &__paymentMethod {
+        font-weight: bold;
+    }
+
+    &__iconContainer {
+        padding: 20px;
+
+        @include max767 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__icon {
+        padding: 10px;
+        background: transparent;
+        border: none;
+        color: var(--color-white);
+    }
+
+    &__makeDepositNowButton {
+        width: 155px;
+        height: 43px;
+        line-height: 43px;
+        background: none;
+        color: var(--color-broom);
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        font-family: Roboto, sans-serif;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 1s ease;
+        border: 1px solid var(--color-broom);
+        border-radius: 4px;
+        margin-bottom: 100px;
+
+        &:hover {
+            background: var(--color-broom);
+            color: var(--color-cola);
+            background-image: var(--color-amber-gradient);
+        }
+    }
+
+}
+
+@keyframes color-change {
+    0% { 
+        color: var(--color-white);
+        transform: scaleX(0);
+    }
+
+    50% { 
+        color: var(--color-broom); 
+        transform: scaleX(2);
+    }
+
+    100% { 
+        color: var(--color-white);
+        transform: scaleX(0); 
+    }
+}

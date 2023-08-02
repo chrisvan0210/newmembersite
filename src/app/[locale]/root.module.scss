@@ -1,0 +1,42 @@
+.mainBody {
+	@extend %main-body;
+}
+
+.pageNotFound {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-top: 128px;
+	min-height: calc(100vh);
+	background: var(--color-bottle-green) url('/static/images/common/page-not-found.png') center no-repeat;
+
+	&__inner {
+		width: 550px;
+		flex-direction: column;
+		@include max767 {
+			width: 380px;
+		}
+	}
+
+	&__title {
+		margin-top: 28%;
+		color: var(--color-broom);
+		font-size: 70px;
+		line-height: 25px;
+		font-weight: 900;
+		@include max767 {
+			margin-top: 46%;
+			font-size: 50px;
+		}
+	}
+
+	&__description {
+		color: var(--color-white);
+		font-size: 35px;
+		line-height: 40px;
+		font-weight: 700;
+		@include max767 {
+			font-size: 25px;
+		}
+	}
+}

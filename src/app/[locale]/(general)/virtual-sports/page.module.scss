@@ -1,0 +1,92 @@
+
+.virtualSports {
+    background: url('https://cdn.hanwei1234.com/Content/images/virtualSports/virtualsportx-bg.jpg') no-repeat center center;
+    background-size: cover;
+
+    &__contentContainer {
+        width: 90%;
+        max-width: 1200px;
+        padding: 48px 0;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 6% 42% 52%;
+        @include max991 {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        margin-top: 32px;
+        align-self: center;
+
+        @include max767 {
+            width: 85%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__contentInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 32px auto 0;
+        width: 435px;
+    }
+
+    &__contentImage {
+        margin: 0 auto;
+
+        @include max991 {
+            width: 85%;
+            height: auto;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font-weight: bold;
+        font-size: 19px;
+        color: var(--color-portafino);
+    }
+
+    &__infoList {
+        margin: 24px 0;
+        font-size: 16px;
+        color: var(--color-white);
+    }
+
+    &__link {
+        margin: 48px auto;
+    }
+
+    &__button {
+        background-image: var(--color-apple-gradient);
+        color: var(--color-white);
+
+        &:hover {
+            background-image: var(--color-apple-gradient2);
+        }
+    }
+}
+
+.iconButton {
+    @extend %center-xy;
+
+    color: var(--color-black);
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 2px solid var(--color-amber);
+    box-shadow: 0 0 10px var(--color-amber2);
+    background-image: var(--color-ronchi-gradient);
+    cursor: pointer;
+}

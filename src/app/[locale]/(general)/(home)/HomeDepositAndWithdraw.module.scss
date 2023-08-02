@@ -1,0 +1,92 @@
+.homeDepositAndWithdraw {
+    width: 90%;
+    margin-left : auto;
+    @include max1199 {
+        margin: 0 auto;
+    }
+    @include max767 {
+        margin: 12px auto;
+        width: 70%;
+    }
+
+    &__deposit {
+        height: 95px;
+        width: 100%;
+    }
+
+    &__withdraw {
+        height: 95px;
+        width: 100%;
+        margin-bottom: 38px;
+    }
+
+    &__moreDetails {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &__depositTitle, &__withdrawTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: none;
+    }
+
+    &__moreDetailsButton {
+        width: 155px;
+        height: 43px;
+        line-height: 43px;
+        background: none;
+        color: var(--color-broom);
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 1s ease;
+        border: 1px solid var(--color-broom);
+        border-radius: 4px;
+        margin-right: 8px;
+
+        &:hover {
+            background: var(--color-broom);
+            color: var(--color-cola);
+            background-image: var(--color-amber-gradient)
+        }
+    }
+}
+
+.progressBar {
+    height : 5px;
+    width: 100%;
+    background-color: var(--color-fun-green3);
+    border-radius: 40px;
+    margin: 10px 0;
+
+    &__bar {
+        height: 100%;
+        background-image: var(--color-persian-red-gradient);
+        border-radius: 40px;
+        text-align: right;
+        position:relative;
+        transition: width 1.5s;
+
+        &::after {
+            content: "";
+            width: 100%;
+            display: block;
+            position: absolute;
+            height: 60px;
+            top: 2px;
+            transform: skewX(30deg);
+            left: 17px;
+            background: var(--color-white-gradient2)
+        }
+    };
+};
+

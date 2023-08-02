@@ -1,0 +1,174 @@
+.slotsContent {
+    background: var(--color-county-green-92);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    padding: 24px 5px;
+    margin: 0 auto;
+}
+
+// Top Bar
+.topMenu {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid var(--color-watercourse);
+    border-radius: 50px;
+    box-shadow: inset 0 0 10px var(--color-green-pea2);
+    background: var(--color-country-green);
+    width: auto;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        color: var(--color-twine);
+        transition: all .5s ease;
+        padding: 10px 25px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 2;
+
+        &:hover,
+        &--active{
+            color: var(--color-pickled-bean);
+            text-shadow: 1px 0 var(--color-pickled-bean);
+            background: var(--color-broom);
+            background-image: var(--color-verdigris-gradient);
+        }
+    
+        & img{
+            margin-right: 5px;
+        }
+    }
+    @include max767 {
+        display: none;
+    }
+}
+
+.topSlideEffect{
+    position: absolute;
+    width: 105px;
+    height: 43px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(10, 0.1, 0.1, 0.1);
+    background: var(--color-broom);
+    background-image: var(--color-verdigris-gradient);
+    z-index: 0;
+}
+
+// Bottom Bar
+.bottomMenu {
+    position: relative;
+    display: flex;
+    margin: 15px 0;
+    padding: 7px 0;
+    cursor: pointer;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        color: var(--color-twine);
+
+        & span:first-child::before{
+            margin-right: 5px;
+        }
+    
+        &--active, 
+        &:hover{
+            & span:first-child::before,
+            & span:nth-child(2){
+                color: var(--color-moss-green);
+            } 
+        }
+    }
+    @include max767 {
+        display: none;
+    }
+}
+
+.bottomSlideEffect{
+    position: absolute;
+    width: 99px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    border-bottom: 2px solid var(--color-broom);
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(10, 0.1, 0.1, 0.1);
+}
+
+// Slots Games Container
+.contentsContainer{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-gap: 15px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+
+    @include max1199 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include max991 {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
+        
+        &__winners {
+            width: 100%;
+            grid-row: span 2;
+            grid-column: span 3;
+        }
+    }
+    @include max767 {
+        grid-template-columns: 1fr 1fr;
+
+        &__winners {
+            width: 100%;
+            grid-column: span 2;
+        }
+    }
+}
+
+.winners{
+    width: 100%;
+    height: auto;
+    grid-row: span 3;
+    grid-column: span 2;
+
+    @include max767 {
+        display: none;
+    }
+}
+
+.mobile{
+    display: none;
+    margin-bottom: 20px;
+    @include max767 {
+        width: 100%;
+        display: flex;
+    }
+
+    &__left{
+        margin-right: 8px ;
+        flex-basis: 100%;
+    }
+
+    &__right{
+        flex-basis: 100%;
+    }
+
+    &__item {
+        color: var(--color-black);
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    &__itemSelected {
+        border: 1px solid var(--color-salem3);
+    }
+}

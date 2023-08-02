@@ -1,0 +1,19 @@
+.homeContent {
+    @extend %center-xy;
+
+    flex-direction: column;
+    background: url('https://www.fb88big.com/Content/images/page-bg.png');
+}
+
+.contents {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    @include max767 {
+        display: flex;
+        flex-direction: column;
+    }
+}

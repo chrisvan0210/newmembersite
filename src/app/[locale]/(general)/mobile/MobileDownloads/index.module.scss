@@ -1,0 +1,86 @@
+.mobileDownloads {
+  width: 550px;
+  margin: 12px auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  @include max991 {
+    width: 90%
+  }
+  @include max575 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  
+    &:nth-child(1) {
+      border-right: 1.5px solid var(--color-white);
+      @include max575 {
+        border-right: 0;
+      }
+    }
+  }
+  
+  &__image {
+    margin: 0 auto 12px;
+  }
+  
+  &__button {
+    margin: 12px auto !important;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: bold;
+  color: var(--color-kaitoke-green);
+
+  &__title {
+    margin: 32px 0 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-alto);
+  }
+
+  &__subTitle {
+    margin: 12px 0;
+  }
+
+  &__imageContainer {
+    background: var(--color-kaitoke-green);
+    margin: 6px auto;
+    width: 266px;
+  }
+
+  &__image {
+    padding: 8px;
+  }
+
+  &__mobileInstallGuide {
+    @extend %center-xy;
+  
+    width: 208px;
+    height: 58px;
+    margin: 6px auto 12px;
+    font-weight: bold;
+    color: var(--color-broom);
+    background: url('https://cdn.hanwei1234.com/Content/images/mobile/new/new/how-to-install.png') no-repeat center center;
+
+    &--ios {
+      background: url('https://cdn.hanwei1234.com/Content/images/mobile/new/qrcode/btn-how-to-install_ios.png') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  &__mobileInstallGuideText {
+    padding-left: 20px;
+  }
+}

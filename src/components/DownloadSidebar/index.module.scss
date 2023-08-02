@@ -1,0 +1,129 @@
+
+.downloadSidebar {
+  background-size: cover;
+  height: 341px;
+  width: 56px;
+  position: fixed;
+  left: 0;
+  top: 166px;
+  border-left: none;
+  z-index: 50;
+  transition: left 1s;
+  display: block;
+
+  @include max991 {
+    display: none;
+  }
+
+  &--enBackground {
+    background: url('https://cdn.hanwei1234.com/Content/images/sidebar/side-download-gr-en.png')
+      no-repeat top center;
+  }
+
+  &--cnBackground {
+    background: url('https://cdn.hanwei1234.com/Content/images/sidebar/side-download-gr-cn.png')
+      no-repeat top center;
+  }
+
+  &--thBackground {
+    background: url('https://cdn.hanwei1234.com/Content/images/sidebar/side-download-gr-th.png')
+      no-repeat top center;
+  }
+
+  &--vnBackground {
+    background: url('https://cdn.hanwei1234.com/Content/images/sidebar/side-download-gr-vn.png')
+      no-repeat top center;
+  }
+
+  &:hover {
+    left: 250px;
+  }
+
+  &__slidingDownloadSection {
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    width: 251px;
+    background: var(--color-fun-green);
+    background: url("https://cdn.hanwei1234.com/Content/images/sidebar/side-download-bg.jpg")
+      no-repeat top center;
+    border-bottom-right-radius: 10px;
+    background-size: cover;
+    left: -250px;
+  }
+
+  &__title {
+    color: var(--color-broom);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    padding: 18px 0 5px;
+  }
+
+  &__description {
+    color: var(--color-white);
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 27px;
+  }
+
+  &__sportyApp, &__mainApp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 222px;
+    margin: 0 auto;
+  }
+
+
+  &__sportyAppContent, &__mainAppContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--color-white);
+  }
+
+  &__fb88sportsLogo {
+    margin: 0 5px 0 10px;
+  }
+
+  &__fb88sportsDescription {
+    padding: 30px 15px 5px;
+    font-size: 13px;
+  }
+
+  &__sidebarSports {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  &__downloadLink {
+    display: flex;
+    align-items: center;
+    width: 104px;
+    height: 42px;
+    line-height: 41px;
+    background: var(--color-lemon);
+    color: var(--color-jewel);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px 5px 34px;
+    background-image: var(--color-amber-gradient);
+    box-shadow: var(--color-shadow-40);
+  }  
+
+  &__icon {
+    width: 19px;
+    height: 25px;
+    padding: 0 5px;
+  }  
+}

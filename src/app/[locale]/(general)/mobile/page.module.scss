@@ -1,0 +1,197 @@
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+
+    &__headerContainer {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    &__header {
+        width: 98%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 5px solid var(--color-deep-fir);
+
+        &--active {
+            border-bottom: 5px solid var(--color-broom);
+        }
+    }
+
+    &__headerImage {
+        width: auto;
+        height: 110px;
+        padding: 6px 2px;
+        cursor: pointer;
+        @include max991 {
+            width: auto;
+            height: 85px;
+            padding: 8px 3px;
+        }
+
+        @include max575 {
+            width: auto;
+            height: 60px;
+            padding: 12px 4px;
+        }
+    }
+
+    &__tabContentContainer {
+        background: var(--color-bottle-green2) url('https://cdn.hanwei1234.com/Content/images/mobile/new/content-bg.jpg') no-repeat top center;
+    }
+
+    &__tabContent {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1280px;
+
+        &--slideLeft {
+            animation: 0.65s ease 1 slide-from-right;
+        }
+
+        &--slideRight {
+            animation: 0.65s ease 1 slide-from-left;
+        }
+    }
+
+    &__top {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        @include max991 {
+            display: flex;
+        }
+    }
+
+    &__mobileContent {
+        width: 100%;
+        margin: 56px auto 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__mobileAndroidHeader {
+        @extend %center-xy;
+
+        font-size: 19px;
+        flex-direction: row;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__htmlImage {
+        margin: 0 auto;
+        @include max575 {
+            width: 75%;
+            height: auto;
+        }
+    }
+
+    &__subHeader {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    &__html5 {
+        margin: 12px auto;
+        font-size: 35px;
+        font-weight: bold;
+        color: var(--color-broom)
+    }
+
+    &__iosHeader {
+        margin: 12px auto;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &__iosSubHeader {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    &__mobileInstallGuide {
+        @extend %center-xy;
+
+        width: 208px;
+        height: 58px;
+        margin: 12px auto;
+        font-weight: bold;
+        color: var(--color-broom);
+        background: url('https://cdn.hanwei1234.com/Content/images/mobile/new/new/how-to-install.png') no-repeat center center;
+    }
+    
+    &__mobileInstallGuideText {
+        padding-left: 20px;
+    }
+
+    &__mobileList {
+        width: 70%;
+        font-size: 14px;
+        line-height: 28px;
+        margin: 12px auto 0;
+    }
+
+    &__bottom {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 0;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    &__bottomItem {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    &__bottomImage {
+        margin: 0 auto;
+        transition: all ease 0.5s;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+
+        @include max767 {
+            height: 75px;
+            width: auto;
+        }
+    }
+
+    &__bottomText {
+        width: 75%;
+        margin: 14px auto 0;
+        text-align: center;
+    }
+}

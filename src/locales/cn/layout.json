@@ -1,0 +1,18 @@
+{
+	"header": {
+		"home": "主页",
+		"mobile": "手机 ",
+		"sportsbook": "体育",
+		"virtual_sports": "虚拟体育",
+		"esports": "电竞",
+		"casino_club": "真人娱乐",
+		"slots": "老虎机",
+		"games": "游戏",
+		"lottery": "彩票",
+		"promotions": "优惠"
+	},
+	"footer": {
+		"all_rights_reserved": "保留所有权利"
+	},
+	"test": "TEST"
+}

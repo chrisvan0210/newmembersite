@@ -1,0 +1,471 @@
+@mixin game-background-style($url) {
+    background: url($url) no-repeat top center;
+    background-size: cover;
+    min-height: 850px;
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin game-content-style($url, $height, $top, $left){
+    background: url($url) no-repeat;
+    min-height: $height;
+    background-size: contain;
+    position: relative;
+    top: $top;
+    left: $left;
+
+    @include max1199 {
+        position: static;
+        width: 100%;
+        background: none;
+        background-size: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@mixin game-content-container-style($ml, $pt, $width) {
+    margin-left: $ml;
+    padding-top: $pt;
+    width: $width;
+    text-align: center;
+}
+
+@mixin button-default-style {
+    max-width: 200px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+.sportsBook {
+    min-height: 100vh;
+    position: relative;
+
+    &__3game {
+        @include game-background-style("https://www.fb88big.com/Content/images/Sports/background-sports3.jpg");
+    }
+
+    &__5game {
+        @include game-background-style("https://www.fb88big.com/Content/images/Sports/background-sports365.jpg");
+    }
+
+    &__7game {
+        @include game-background-style("https://www.fb88big.com/Content/images/Sports/background-sportsX1.jpg");
+    }
+
+    &__247game {
+        @include game-background-style("https://www.fb88big.com/Content/images/Sports/background-sports247.jpg");
+    }
+
+    &__fb88App {
+        @include game-background-style("https://www.fb88big.com/Content/images/Sports/background-fb88-app1.jpg");
+    }
+
+    &__3gameContent {
+        @include game-content-style("https://www.fb88big.com/Content/images/Sports/sports3Image.png", 590px, 76px,368px );
+    
+        @include max1399 {
+            left: 150px;
+        }
+    }
+
+    &__5gameContent {
+        @include game-content-style("https://www.fb88big.com/Content/images/Sports/sports5-sportsbook.png", 744px, 110px, 368px);
+    
+        @include max1399 {
+            left: 150px;
+        }
+
+    }
+
+    &__7gameContent {
+        @include game-content-style("https://www.fb88big.com/Content/images/Sports/Sports7-Img.png", 540px, 120px,820px );
+    }
+
+    &__247gameContent {
+        @include game-content-style("https://www.fb88big.com/Content/images/Sports/sports247-player-bg1.png", 700px, 75px, 1035px);
+    }
+
+    &__fb88AppContent {
+        @include game-content-style("https://www.fb88big.com/Content/images/Sports/sports-fb88-app-v1.png", 543px, 190px, 372px );
+        
+        @include max1399 {
+            left: 150px;
+        }
+    }
+
+    &__3gameContentContainer {
+        @include game-content-container-style(31.5%, 5px, 600px);
+
+        @include max1399 {
+            width: 500px;
+            margin-left: 45%;
+        }
+    
+        @include max1199 {
+            width: 100%;
+            margin: 20px;
+            padding: 40px;
+            background-color: var(--color-holly-60);
+            border-radius: 20px;
+            padding-bottom: 0;
+        }
+        
+    }
+
+    &__5gameContentContainer {
+        @include game-content-container-style(36.4%, 84px, 450px);
+
+        @include max1399 {
+            width: 500px;
+            margin-left: 45%;
+        }
+    
+        @include max1199 {
+            width: 100%;
+            margin: 20px;
+            padding: 40px;
+            background-color: var(--color-holly-60);
+            border-radius: 20px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__7gameContentContainer {
+        @include game-content-container-style(-415px, 22px, 400px);
+
+        @include max1399 {
+            width: 500px;
+            margin-left: -43%;
+        }
+    
+        @include max1199 {
+            width: 100%;
+            margin: 20px;
+            padding: 40px;
+            background-color: var(--color-holly-60);
+            border-radius: 20px;
+            padding-bottom: 0;
+        }
+        
+    }
+
+    &__247gameContentContainer {
+        @include game-content-container-style(-680px, 0, 665px);
+
+        @include max1399 {
+            width: 500px;
+            margin-left: -60%;
+        }
+    
+        @include max1199 {
+            width: 100%;
+            margin: 20px;
+            padding: 40px;
+            background-color: var(--color-holly-60);
+            border-radius: 20px;
+            padding-bottom: 0;
+        }
+        
+    }
+
+    &__fb88AppContentContainer {
+        @include game-content-container-style(700px, 0, 487px);
+
+        @include max1399 {
+            width: 500px;
+            margin-left: 48%;
+        }
+    
+        @include max1199 {
+            width: 100%;
+            margin: 20px;
+            padding: 40px;
+            background-color: var(--color-holly-60);
+            border-radius: 20px;
+            padding-bottom: 0;
+        }
+        
+    }
+
+    &__3gamePageLogo, &__5gamePageLogo, &__7gamePageLogo, &__247gamePageLogo {
+        color: var(--color-white);
+    }
+
+    &__3gameHeaderTitle, &__5gameHeaderTitle, &__7gameHeaderTitle, &__247gameHeaderTitle {
+        color: var(--color-texas);
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    &__247gameHeaderTitle {
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+
+    &__3gameSportsContent, &__5gameSportsContent, &__7gameSportsContent {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    &__fb88AppPageContent {
+        font-size: 20px;
+        margin-bottom: 25px;
+        color: var(--color-white);
+        line-height: 30px;
+    }
+
+    &__7gameSportsContent {
+        margin-top: 30px;
+    }
+
+    &__247gameSportsContent {
+        font-style: italic;
+        margin-top: 20px;
+    }
+
+    &__3gameSportsContentList, &__5gameSportsContentList, &__7gameSportsContentList {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__3gameContentList, &__5gameContentList, &__7gameContentList {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+
+        &::marker {
+            unicode-bidi: isolate;
+            font-variant-numeric: tabular-nums;
+            text-transform: none;
+            text-indent: 0 !important;
+            text-align: start !important;
+            text-align-last: start !important;
+        }
+    }
+
+    &__5gameContentList, &__7gameContentList {
+        font-size: 16px;
+    }
+
+    &__7gameContentList {
+        margin-bottom: 10px;
+    }
+
+    &__3gameContentListTitle {
+        text-transform: uppercase;
+        color: var(--color-texas);
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__3gameButtonPlayNow, &__5gameButtonPlayNow, &__7gameButtonPlayNow {
+        margin-top: 40px;
+    }
+
+
+    &__3gameButtonBlackSports {
+        @include button-default-style;
+
+        background: var(--color-black);
+        background: linear-gradient(to left,var(--color-dove-gray) 0%,var(--color-black) 100%);
+        background: linear-gradient(to right,var(--color-dove-gray) 0%,var(--color-black) 100%);
+        color: var(--color-white);
+        border: 1px solid var(--color-gray2);
+
+        &:hover {
+            background: linear-gradient(to left,var(--color-dove-gray) 0%,var(--color-thunder) 100%);
+            background: linear-gradient(to right,var(--color-dove-gray) 0%,var(--color-thunder) 100%);
+            color: var(--color-white);
+        }
+    }
+
+    &__5gameButtonEuro, &__5gameButtonAsian {
+        @include button-default-style;
+
+        background: var(--color-bright-red);
+        background: linear-gradient(to left,var(--color-chestnut) 0%,var(--color-bright-red) 100%);
+        background: linear-gradient(to right,var(--color-chestnut) 0%,var(--color-bright-red) 100%);
+        color: var(--color-white);
+        border: 1px solid var(--color-punch);
+
+        &:hover {
+            background: linear-gradient(to left,var(--color-chestnut) 0%,var(--color-torch-red) 100%);
+            background: linear-gradient(to right,var(--color-chestnut) 0%,var(--color-torch-red) 100%);
+            color: var(--color-white);
+        }
+
+        @include max767 {
+            margin-top: 20px;
+        }
+    }
+
+    &__7gameButtonGreenSports, &__247gameButtonGreenSports{
+        @include button-default-style;
+
+        background: var(--color-apple);
+        background: linear-gradient(to left,var(--color-apple) 0%,var(--color-salem4) 100%);
+        background: linear-gradient(to right,var(--color-apple) 0%,var(--color-salem4) 100%);
+        color: var(--color-white);
+        border: 1px solid var(--color-apple2);
+
+        &:hover {
+            color: var(--color-white);
+            background: var(--color-apple-gradient2);
+        }
+    }
+
+    &__sports247Device {
+        padding-top: 50px;
+
+        @include max1199 {
+            display: none;
+        }
+    }
+
+    &__3gameShowOnMobile {
+        @include max1199 {
+            margin: 50px 0;
+            background: url("https://cdn.hanwei1234.com/Content/images/Sports/sports365Image-mob.png") no-repeat center;
+            height: 308px;
+            background-size: contain;
+        }
+    }
+
+    &__5gameShowOnMobile {
+        @include max1199 {
+            margin: 50px 0;
+            background: url("https://cdn.hanwei1234.com/Content/images/Sports/sports365Image2.png") no-repeat center;
+            height: 308px;
+            background-size: contain;  
+        }
+    }
+
+    &__7gameShowOnMobile {
+        @include max1199 {
+            margin: 50px 0;
+            background: url("https://www.fb88big.com/Content/images/Sports/Sports7-Img.png") no-repeat center;
+            height: 308px;
+            background-size: contain;  
+        }
+    }
+
+    &__247gameShowOnMobile {
+        @include max1199 {
+            margin: 50px 0;
+            background: url("https://cdn.hanwei1234.com/Content/images/Sports/sports247-device.png") no-repeat center;
+            height: 308px;
+            background-size: contain;  
+        }
+    }
+
+    &__sports247Image {
+        background: url("https://cdn.hanwei1234.com/Content/images/navigation/sportsnav/new2-sports247-en.png") no-repeat center;
+        height: 46px;
+        background-size: contain;
+    }
+
+    &__fb88AppDownloadButtons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 15px;
+
+        @include max575 {
+            flex-direction: column;
+        }
+    }
+
+    &__fb88MainApp, &__fb88SportsApp {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        height: 260px;
+    }
+
+    &__fb88AndroidButton {
+        width: 250px;
+        height: 57px;
+        text-align: center;
+        line-height: 50px;
+        background: url("https://www.fb88big.com/Content/images/Sports/android.png") no-repeat;
+        color: var(--color-white);
+        font-size: 15px;
+        background-size: 88%;
+        text-transform: uppercase;
+        transition: all .5s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__fb88IosButton {
+        width: 250px;
+        height: 57px;
+        text-align: center;
+        line-height: 50px;
+        background: url("https://www.fb88big.com/Content/images/Sports/ios.png") no-repeat;
+        color: var(--color-white);
+        font-size: 15px;
+        background-size: 88%;
+        text-transform: uppercase;
+        transition: all .5s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__navButtonSlide {
+        position: fixed;
+        left: 10%;
+        top: 20%;
+        z-index: 2;
+
+        @include max991 {
+            display: none;
+        }
+    }
+
+    &__navLike {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background: var(--color-apple-gradient);
+        margin-bottom: 20px;
+        cursor: pointer;
+        position: relative;
+        transition: all .5s ease;
+        transform: scale(.9);
+        border: 2px solid var(--color-malachite);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #17711b;
+
+        &:hover, &--selectedNav {
+            background-image: var(--color-ronchi-gradient);
+            transform: scale(1.1);
+            color: #333;
+            border: 2px solid var(--color-amber);
+            box-shadow: 0 0 10px var(--color-amber2);
+        }
+    }
+    
+}

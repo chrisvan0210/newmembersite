@@ -1,0 +1,5 @@
+.mainBody {
+  @extend %main-body;
+
+  background: var(--color-wild-sand);
+}

@@ -1,0 +1,165 @@
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes up-down-ball {
+  0% {
+    transform: translateY(0) rotateX(30deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotateX(0deg);
+  }
+
+  100% {
+    transform: translateY(0) rotateX(30deg);
+  }
+}
+
+@keyframes up-down-dice6 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-50px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes up-down-dice3 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-90px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.background {
+  position: relative;
+  margin: 0 auto;
+
+  &__bubble1 {
+    position: absolute;
+    top: 160px;
+    left: 36px;
+    animation: 6s ease 1.25s infinite up-down;
+  }
+  
+  &__bubble2 {
+    position: absolute;
+    top: 190px;
+    left: 54px;
+    animation: 6s ease 0.5s infinite up-down;
+  }
+
+  &__bubble3 {
+    position: absolute;
+    top: 180px;
+    left: 350px;
+    animation: 6s ease 0.75s infinite up-down;
+  }
+
+  &__seaweedLeft {
+    position: absolute;
+    top: 340px;
+    left: 10px;
+    animation: 6s ease 1s infinite up-down;
+    z-index: 6;
+  }
+
+  &__seaweedRight {
+    position: absolute;
+    top: 350px;
+    left: 335px;
+    animation: 6s ease 0.25s infinite up-down;
+    z-index: 6;
+  }
+
+  &__rocket {
+    position: absolute;
+    top: 360px;
+    left: 40px;
+    animation: 6s ease 1s infinite up-down;
+    z-index: 6;
+  }
+
+  &__splash {
+    position: absolute;
+    top: 390px;
+    left: 270px;
+    animation: 6s ease 0.25s infinite up-down;
+    z-index: 6;
+  }
+
+  &__ball8 {
+    position: absolute;
+    top: 140px;
+    left: 80px;
+    animation: 5s ease 1s infinite up-down-ball;
+    z-index: 6;
+    @include max1199 {
+      left: 30px;
+    }
+  }
+
+  &__ball30 {
+    position: absolute;
+    top: 80px;
+    right: 300px;
+    animation: 5s ease 0.25s infinite up-down-ball;
+    z-index: 6;
+    @include max1199 {
+      top: 100px;
+      right: 145px;
+    }
+  }
+
+  &__dice6 {
+    position: absolute;
+    top: 320px;
+    right: 330px;
+    animation: 6s ease 1s infinite up-down-dice6;
+    z-index: 6;
+    @include max1199 {
+      top: 400px;
+      right: 240px;
+    }
+  }
+
+  &__dice3 {
+    position: absolute;
+    top: 310px;
+    right: 40px;
+    animation: 6s ease 0.25s infinite up-down-dice3;
+    z-index: 6;
+    @include max1199 {
+      top: 400px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+	"header": {
+		"home": "Trang Chủ",
+		"mobile": "Ứng Dụng ",
+		"sportsbook": "Thể Thao",
+		"virtual_sports": "Thể Thao Ảo",
+		"esports": "Esports",
+		"casino_club": "Casino Trực Tuyến",
+		"slots": "Quay Hũ",
+		"games": "Trò Chơi",
+		"lottery": "Xổ Số",
+		"promotions": "Khuyến Mãi"
+	},
+	"footer": {
+		"all_rights_reserved": "Tất Cả Các Quyền Được Bảo Lưu"
+	}
+}
